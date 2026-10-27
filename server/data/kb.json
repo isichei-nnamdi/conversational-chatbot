@@ -1,0 +1,1437 @@
+{
+  "version": "2026.10.1",
+  "note": "Hand-curated from the SIWES AMA recording (coordinator, Miva Open University) and the coordinator-answered Q&A sheets. No student names, matric numbers or personal emails. 'ama' facts carry a timestamp [mm:ss] in the recording; 'sheet' facts come from the official written answers. Where the two differ, the written answers and the newest AMA statements win.",
+  "glossary": [
+    {
+      "term": "SIWES",
+      "meaning": "Students' Industrial Work Experience Scheme. Compulsory industrial training for School of Computing students. Other schools call it an internship."
+    },
+    {
+      "term": "SIWES I / SIWES II",
+      "meaning": "Two 3-month parts. SIWES I is the 200L course (code ends in 299). SIWES II is the 300L course (code ends in 399)."
+    },
+    {
+      "term": "LMS",
+      "meaning": "The Miva learning platform. The SIWES course, forms, logbook and placement list are in the SIWES course materials."
+    },
+    {
+      "term": "SCAF form",
+      "meaning": "The form the ITF needs. You fill it, the company stamps and signs it, and you take it to the nearest ITF office."
+    },
+    {
+      "term": "ITF",
+      "meaning": "Industrial Training Fund. It keeps a record of your training. It does not supervise you; Miva does."
+    },
+    {
+      "term": "Acceptance letter",
+      "meaning": "A letter from the company saying they accepted you. You upload it on the LMS to start the official process."
+    },
+    {
+      "term": "School supervisor",
+      "meaning": "The Miva staff member assigned to you after you upload your acceptance letter. They run your virtual supervision."
+    },
+    {
+      "term": "Industry-based supervisor",
+      "meaning": "Your supervisor at the company. They must join your supervision call."
+    },
+    {
+      "term": "Program coordinator",
+      "meaning": "Your department's coordinator. You email them to schedule your defence."
+    },
+    {
+      "term": "Success advisor",
+      "meaning": "Your student support contact for course, deferment and tuition questions."
+    }
+  ],
+  "groups": [
+    "Start here",
+    "Before you start",
+    "While you train",
+    "Finish up",
+    "Your situation"
+  ],
+  "segments": [
+    {
+      "id": "basics",
+      "group": "Start here",
+      "title": "What SIWES is",
+      "icon": "book",
+      "blurb": "Duration, who does it, what it costs.",
+      "keywords": [
+        "siwes",
+        "what is",
+        "duration",
+        "months",
+        "compulsory",
+        "tuition",
+        "pay",
+        "paid",
+        "salary",
+        "departments",
+        "internship",
+        "100 level",
+        "100l",
+        "200l",
+        "300l"
+      ],
+      "steps": [],
+      "facts": [
+        {
+          "t": "SIWES is compulsory industrial training. You need it to graduate.",
+          "src": "sheet"
+        },
+        {
+          "t": "It lasts 6 months in total: SIWES I (3 months, 200L) and SIWES II (3 months, 300L).",
+          "src": "sheet"
+        },
+        {
+          "t": "You register for the SIWES course in your 200L first semester. Training officially starts in 200L second semester, but you can start earlier if you find a placement.",
+          "src": "sheet"
+        },
+        {
+          "t": "You cannot do SIWES I and II at the same time. Each part is 3 months. You can do them back to back (6 months at one place) or separately.",
+          "src": "sheet"
+        },
+        {
+          "t": "The month you start counts as month one, whatever the start date.",
+          "src": "sheet"
+        },
+        {
+          "t": "Your date of start for the school is the day your acceptance letter is submitted. Submit it early.",
+          "src": "ama",
+          "at": "01:09"
+        },
+        {
+          "t": "100L students do not do SIWES yet. It starts at 200L.",
+          "src": "ama",
+          "at": "01:50"
+        },
+        {
+          "t": "Experience does not exempt you. Even people with 10+ years of work experience must do it.",
+          "src": "sheet"
+        },
+        {
+          "t": "School of Computing departments call it SIWES. Other schools (for example mass communication, economics, public policy) call it an internship and use their own program coordinator.",
+          "src": "ama",
+          "at": "01:41"
+        },
+        {
+          "t": "Your normal classes and exams continue during SIWES.",
+          "src": "sheet"
+        },
+        {
+          "t": "Your tuition already covers the whole SIWES programme, even if it runs past your session.",
+          "src": "sheet"
+        },
+        {
+          "t": "Companies are not guaranteed to pay you.",
+          "src": "sheet"
+        },
+        {
+          "t": "You do not need to be at the company every day. Two or three days a week is fine if you learn something and record it in your logbook.",
+          "src": "ama",
+          "at": "01:40"
+        },
+        {
+          "t": "Spot checks happen. Some students have been visited to confirm their placement. A false claim means retaking SIWES.",
+          "src": "ama",
+          "at": "01:15"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How long is SIWES and when does it start?",
+          "a": "The SIWES program runs for a total of six months, however the program is divided into SIWES I and SIWES II which runs for three months individually in your 200L and 300L respectively. You are expected to register for the SIWES course in your 200L first semester and go through the SIWES course materials. Then, you are expected to commence the SIWES program during the second semester of your second year at Miva. However, if you are able to secure a SIWES placement before the official commencement of the program, do not hesitate or wait to start the program in the second semester",
+          "src": "sheet"
+        },
+        {
+          "q": "Can I wait until 300L to start?",
+          "a": "The SIWES program officially commences of the second semester of your 200L through the first semseter of your 300L. However, if you are able to secure a placement for your SIWES during the first semsester of your 200L, do not hesitate to begin your training. But note that you are expected to complete your training at a company/role relevant to your course of study",
+          "src": "sheet"
+        },
+        {
+          "q": "Should I start before or after my exams?",
+          "a": "You can begin the SIWES any time during your 200L, however going for the industrial training program officially commences in your 200L second semester. Therefore, it is advisable to to begin before your exams so that you can conclude the three months (SIWES I) before your semester exams commences",
+          "src": "sheet"
+        },
+        {
+          "q": "How is the 3-month period counted?",
+          "a": "Please note that the SIWES program period runs for three months individually for SIWES I & II from the date of commencement of training at your place of attachment till the end of your training. This means that the month you commenced training counts as one month regardless of the start date of that month",
+          "src": "sheet"
+        },
+        {
+          "q": "Can I do SIWES I and II at the same time?",
+          "a": "No, you cannot do both SIWES at once, each of the SIIWES program runs for 3 months individually, therefore you are expected to complete 6 months of industrial training. In the case of working at a clothing company, if you have a tech initiative or solution that will help the clothing company, or if the clothing company has a department relevant to your course of study, you can carry out your SIWES there",
+          "src": "sheet"
+        },
+        {
+          "q": "If I register SIWES I for 6 months, does it cover SIWES II?",
+          "a": "Yes",
+          "src": "sheet"
+        },
+        {
+          "q": "I have 10+ years of work experience. Do I still need SIWES?",
+          "a": "Yes, regardless of your years of experience in a field, SIWES is a compulsory course every Nigerian university student takes as part of fulfilling the necessary requirements for graduation",
+          "src": "sheet"
+        },
+        {
+          "q": "Is SIWES only for the School of Computing?",
+          "a": "Other departments go for internships at their required time, however all school of computing departments go for SIWES",
+          "src": "sheet"
+        },
+        {
+          "q": "Do my classes stop while I do SIWES?",
+          "a": "No, typically all studies continue while you are undergoing the SIWES program, however, if the academic load seems too much for you while doing your SIWES, you can choose to defer the other courses to solely focus on your SIWES. However, please note that deferring courses can result to an extension of your graduation date. Reach out to your success advisor for more inquiries about restructuring your program",
+          "src": "sheet"
+        },
+        {
+          "q": "Do I write exams with everyone else?",
+          "a": "Please note that normal academic studies continue regardless of if a student is or is not undergoing their SIWES attachment",
+          "src": "sheet"
+        },
+        {
+          "q": "Do I pay extra tuition if SIWES runs past my session?",
+          "a": "No, you are not required to pay another session's tuition, your already paid tuition covers for the enirtety of the SIWES program. Therefore, you can complete the SIWES program if you yet to finish it under your current registration. You can still contact your success advisor if you need more clarifications regarding tuition payments",
+          "src": "sheet"
+        },
+        {
+          "q": "Will the companies pay me?",
+          "a": "Please note that financial compensation is not guaranteed from companies during your SIWES training",
+          "src": "sheet"
+        },
+        {
+          "q": "How do I balance SIWES and school work?",
+          "a": "You can always defer a semester to focus only on SIWES if the workload is too much for you, i.e. taking SIWES as a standalone course for an entire semester. Though be aware that deferring a semester extends your graduation date",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "getting-started",
+      "group": "Start here",
+      "title": "The whole process",
+      "icon": "route",
+      "blurb": "Every step, in order, from enrolment to defence.",
+      "keywords": [
+        "how do i",
+        "steps",
+        "process",
+        "start",
+        "begin",
+        "next step",
+        "what next",
+        "documents",
+        "overview",
+        "order"
+      ],
+      "steps": [
+        "Register for the SIWES course on the LMS (200L first semester) and read the course materials.",
+        "Generate your SIWES letter: menu > Request SIWES Letter. Use it to apply to companies.",
+        "Get an acceptance letter from the company you will train with.",
+        "Upload the acceptance letter: menu > Upload Acceptance Letter, then fill the placement form.",
+        "Download the SCAF form, fill it, get it stamped and signed by the company, and take it to the nearest ITF office.",
+        "Check your Miva email. A school supervisor is assigned and writes to you.",
+        "Train, and fill your logbook as you go.",
+        "After at least 2 months, book your virtual supervision. Your company supervisor must join the call.",
+        "When you finish SIWES II, upload your signed logbook and technical report on the LMS.",
+        "Email your program coordinator to schedule your defence."
+      ],
+      "facts": [
+        {
+          "t": "Form 8 is now digital. You fill it during supervision. The only form you chase yourself is the SCAF form.",
+          "src": "ama",
+          "at": "01:25"
+        },
+        {
+          "t": "Do the steps at the right time. Students who skipped the acceptance letter or supervision had to redo or got a low score.",
+          "src": "ama",
+          "at": "01:10"
+        },
+        {
+          "t": "Use your Miva student email for everything. Do not use a personal email unless you are told to.",
+          "src": "ama",
+          "at": "01:18"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do I go about my SIWES?",
+          "a": "You start your SIWES by first registering for the course in your 200L first semester. Then you are to go through the course materials to familiarize yourself with the entire process. During which you are expected to start looking and applying to organizations for placement using your SIWES letter (which can be generated under 'Request SIWES Letter' on the LMS). Once you have secured a placement, you are expected to upload an acceptance letter (given to you by the organization you'll be conducting your SIWES at) on the LMS and fill out the SIWES placement form appropriately with your details. Subsequently, you are also expected to download the SCAF Form from the SIWES course materials, fill it, and get it endorsed by your organization of attachment with their signature and stamp, before submitting it to the nearest ITF office to you (Note that this step is excluded for diasporan learners as the school will handle the submission for you). Once you have successfully uploaded your acceptance letter, a supervisor will then be assigned to you, whom you will reach out to for supervision when you have undergone at least two months of industrial training for your supervision alongside your industry-based supervisor. Finally, you are expected to submit your technical report and filled logbook on the LMS once you have completed SIWES I & SIWES II, then reach out to your program coordinator to defend the course",
+          "src": "sheet"
+        },
+        {
+          "q": "A company accepted me. What is the next step?",
+          "a": "After securing a placement for your SIWES, you are expected to upload your acceptance letter through the LMS. Upon successful upload, a supervisor will be assigned to you. Your supervisor would reach out to you once they've been assigned. You can reach out to your supervisor for supervision after you must have undergone at least two months of industrial training at your place of attachment",
+          "src": "sheet"
+        },
+        {
+          "q": "I submitted my acceptance letter. What next?",
+          "a": "Continue with your industrial training, then reach out to your supervisor once you have undergone at least two months of training for your virtual supervision",
+          "src": "sheet"
+        },
+        {
+          "q": "Which documents do I need to submit?",
+          "a": "Firstly, you are expected to upload an acceptance letter from your organization of attachment to the LMS, and fill the subsequent placement form approriately. Then you are advised to download the SCAF Form from the SIWES course materials on the LMS to print, fill out, and get endorsed by your industry of attachment before submitting to the ITF office. Finally, when you have concluded your SIWES II, you are expected to submit/upload your filled logbook alongside your technical report on the LMS",
+          "src": "sheet"
+        },
+        {
+          "q": "Which forms do I fill?",
+          "a": "You are expected to fill the SIWES placement form upon uploading your acceptance letter on the LMS. You are also expected to fill the SCAF Form and get it endorsed by your organization of attachment before submitting to the nearest ITF office to you. Note that the submission of SCAF Form is excluded for diasporan students.",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "placement",
+      "group": "Before you start",
+      "title": "Finding a placement",
+      "icon": "building",
+      "blurb": "Where to train, remote options, your own workplace.",
+      "keywords": [
+        "placement",
+        "company",
+        "organization",
+        "organisation",
+        "remote",
+        "virtual",
+        "workplace",
+        "work",
+        "job",
+        "office",
+        "apply",
+        "list",
+        "find",
+        "relevant",
+        "diaspora",
+        "abroad",
+        "nysc",
+        "paid",
+        "stipend"
+      ],
+      "steps": [
+        "Open the SIWES course materials on the LMS and find the recommended companies list.",
+        "Pick about 10 companies that fit your course. Include remote ones and any near you.",
+        "Send each one your SIWES letter by email (or in person if that gets a faster reply).",
+        "Take the first company that accepts you. Ask them for an acceptance letter.",
+        "No reply? Do not wait. Contact other companies on the list or near you."
+      ],
+      "facts": [
+        {
+          "t": "Finding a placement is your responsibility. The list is a set of suggestions, not a guarantee.",
+          "src": "ama",
+          "at": "01:02"
+        },
+        {
+          "t": "You can train remotely, even with a company in another country.",
+          "src": "sheet"
+        },
+        {
+          "t": "The organisation must be reputable and the role must be relevant to your course.",
+          "src": "sheet"
+        },
+        {
+          "t": "You may train where you already work if the role relates to your course and someone other than you supervises you. Think about whether you will really learn something new.",
+          "src": "sheet"
+        },
+        {
+          "t": "Self-employed? You still need an outside organisation to supervise you.",
+          "src": "sheet"
+        },
+        {
+          "t": "Private training academies are allowed (some charge a fee). The goal is that you leave more skilled than you came.",
+          "src": "ama",
+          "at": "01:39"
+        },
+        {
+          "t": "You can change placement. Tell the SIWES coordinator when you do.",
+          "src": "sheet"
+        },
+        {
+          "t": "Staying with the same company for SIWES II means you do not upload a second acceptance letter.",
+          "src": "sheet"
+        },
+        {
+          "t": "If a company extends you from 3 to 6 months, just continue. Do not re-upload. Still book supervision at the end of the first 3 months.",
+          "src": "ama",
+          "at": "01:52"
+        },
+        {
+          "t": "You can do SIWES during NYSC. If you have not started SIWES before 400L you cannot enrol for 400L.",
+          "src": "sheet"
+        },
+        {
+          "t": "Full-time workers can ask their manager for flexible hours or choose a remote company. The requirement cannot be waived.",
+          "src": "sheet"
+        },
+        {
+          "t": "A company that does not accept interns or SIWES, or one that only offers a tiny part-time slot, does not excuse you. Find a flexible or remote company.",
+          "src": "ama",
+          "at": "01:17"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can I do SIWES online? Does the school give me a company?",
+          "a": "You can carry out your SIWES remotely/virtually, or in-person at reputable businesses/companies/institutions. The school provides an inexhaustive list of places of attachment to help students secure placements and begin their training on time (this placement list can be accessed in the SIWES course materials in the LMS). It is advised to start the SIWES early in your 200L and before your final year, so as to ease the academic load and enable you graduate on time with your cohort",
+          "src": "sheet"
+        },
+        {
+          "q": "Where is the list of recommended companies?",
+          "a": "You can check out the school's inexhaustive spreadsheet of recommended companies for a SIWES placement in the SIWES course material on the LMS. Reach out to the contacts provided for each company of your choice, and they would get back to you",
+          "src": "sheet"
+        },
+        {
+          "q": "A company on the list is not replying. What do I do?",
+          "a": "In the case of no response from a company in the placement list provided by the school, do not linger for a response or hesitate to reach out to other companies in the placement list or organizations around you",
+          "src": "sheet"
+        },
+        {
+          "q": "I cannot find a company. Can Miva help?",
+          "a": "You can check out the school's inexhaustive spreadsheet of recommended companies for a SIWES placement in the SIWES course material on the LMS. Reach out to the contacts provided for each company of your choice, and they would get back to you",
+          "src": "sheet"
+        },
+        {
+          "q": "Can I do SIWES remotely?",
+          "a": "Yes, you can carry out your SIWES remotely as long as the organization is a reputable and/or recognized one. The school also provides an inexhaustive list of suggested companies to carry out your SIWES which can be accessed in the SIWES course materials in the LMS",
+          "src": "sheet"
+        },
+        {
+          "q": "Are there placements in my state?",
+          "a": "You can try applying to HiiT PLC or any other reputable organization of your choice that offers remote work if securing a placement in your state is unlikely",
+          "src": "sheet"
+        },
+        {
+          "q": "Can I train in something unrelated to my course?",
+          "a": "No, you are expected to carry out your industrial training at a company/role relevant to your course of study",
+          "src": "sheet"
+        },
+        {
+          "q": "What kind of organisation is acceptable?",
+          "a": "Your SIWES should be carried out at a reputable organization",
+          "src": "sheet"
+        },
+        {
+          "q": "I run my own business. Can I train there?",
+          "a": "You are expected to look for an organization to carry out your SIWES so as to be supervised by another party other than yourself regardless of your self-employed status",
+          "src": "sheet"
+        },
+        {
+          "q": "I already work. Can I do SIWES at my workplace?",
+          "a": "Yes, you can complete the SIWES at your workplace provided that you are undergoing the industrial training at a department/role relevant to your course of study, and you are being properly supervised by someone other than yourself. To start, submit your SIWES letter to the department you are applying to, and once you get an acceptance letter to begin your training, upload a copy of it to the LMS and complete the SIWES placement form appropriately with the right details",
+          "src": "sheet"
+        },
+        {
+          "q": "I work full-time abroad. What can I do?",
+          "a": "You can discuss with your manager at work to figure out how you can structure your working hours to look for any remote-based company to carry out your SIWES",
+          "src": "sheet"
+        },
+        {
+          "q": "Must I be at the company every day?",
+          "a": "Yes, it is okay if you go to your SIWES place of attachment two or three times a week provided you are learning and gaining practical skills each day",
+          "src": "sheet"
+        },
+        {
+          "q": "Can I change my SIWES location?",
+          "a": "Yes, you can change SIWES locations. However, you are to reach out to the SIWES coordinator during this process",
+          "src": "sheet"
+        },
+        {
+          "q": "My company kept me for SIWES II. Do I upload another letter?",
+          "a": "No, since you have already submitted the first acceptance letter for SIWES I and have been retained by the same company for your SIWES II, you can continue your training without re-uploading another letter",
+          "src": "sheet"
+        },
+        {
+          "q": "Do I send my SIWES letter by email?",
+          "a": "Ideally yes you can send the SIWES letter via email, however if submitting the letter physically gets you a faster response from the organization, don't hesitate to do so",
+          "src": "sheet"
+        },
+        {
+          "q": "Can I do SIWES during NYSC?",
+          "a": "Yes, you can complete your SIWES while serving for NYSC. If you have already started SIWES I and are expecting to complete SIWES II in your 400L first semsester, you can still enroll for your final year. However, if you are yet to begin the SIWES program before your 400L, you will not be allowed to enroll for your final year",
+          "src": "sheet"
+        },
+        {
+          "q": "I work offshore with irregular time off. What are my options?",
+          "a": "You can defer a semester to take care of your SIWES, then resume your academic semester to take the remaining deferred courses. If you wish to complete both SIWES programs separately, and not at a stretch of six months, you are free to do so, though note that you won't be allowed to enroll for your final year without completing both programs. Finally, you are also free to undergo training remotely in a reputable organization, and with a schedule that is suitable for you as long as it is permitted by your organization of placement",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "siwes-letter",
+      "group": "Before you start",
+      "title": "SIWES letter",
+      "icon": "mail",
+      "blurb": "Generate the letter you send to companies.",
+      "keywords": [
+        "siwes letter",
+        "request letter",
+        "application letter",
+        "generate",
+        "download letter",
+        "error code"
+      ],
+      "steps": [
+        "Open the LMS on a laptop (phones can fail).",
+        "Open the menu or profile dropdown and click Request SIWES Letter.",
+        "Enter your student email so your details fill in.",
+        "Choose SIWES I, SIWES II, or both.",
+        "Choose the duration (3 or 6 months).",
+        "Enter the company name and address, then submit.",
+        "Download or print the letter and send it to the company."
+      ],
+      "facts": [
+        {
+          "t": "If you get an error code, switch to a laptop, then try again. If it still fails, ask your course rep or success advisor for a copy.",
+          "src": "sheet"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do I generate my SIWES letter?",
+          "a": "You can generate the SIWES Letter from the LMS by navigating under the menu/profile dropdown and clicking 'Request SIWES Letter'. Then input your student email to auto-populate your details, select the SIWES category (i.e. SIWES I, SIWES II, or both) you are generating the letter for. Select the duration (e.g. 3 months or 6 months) of the industrial placement, and fill in the appropriate company details (e.g. company name and address) before clicking submit to geerate the letter. Then print or download the letter into your device",
+          "src": "sheet"
+        },
+        {
+          "q": "I cannot download my SIWES letter.",
+          "a": "Pleae use a laptop to generate and download your SIWES Letter.",
+          "src": "sheet"
+        },
+        {
+          "q": "The SIWES form shows an error code.",
+          "a": "Click 'Back to home' to be redirected to the appropriate webpage, or you can reach out to your department course representative or ask your success advisor to help you out with a copy of the ITF Form",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "acceptance-letter",
+      "group": "Before you start",
+      "title": "Acceptance letter",
+      "icon": "upload",
+      "blurb": "Upload it so a supervisor is assigned.",
+      "keywords": [
+        "acceptance",
+        "upload",
+        "placement form",
+        "enrolled",
+        "enrol",
+        "not enrolled",
+        "submitted",
+        "letter",
+        "assigned",
+        "pdf"
+      ],
+      "steps": [
+        "On the LMS home screen open the menu next to your profile photo.",
+        "Click Upload Acceptance Letter.",
+        "Use your Miva student email on the form.",
+        "Fill in every field. Check twice: you cannot edit after you submit.",
+        "Upload the letter as a PDF and submit.",
+        "Make sure you see a confirmation. If not, submit again."
+      ],
+      "facts": [
+        {
+          "t": "Doing 6 months at one company? Tick both SIWES I and SIWES II on the form. If you only ticked one, it will be fixed. Carry on.",
+          "src": "sheet"
+        },
+        {
+          "t": "Submitted a wrong detail? Email the SIWES coordinator for a correction.",
+          "src": "sheet"
+        },
+        {
+          "t": "A mail saying you did not enrol for SIWES, when you are enrolled on the LMS, can be ignored. Check with the supervisor named in the mail.",
+          "src": "ama",
+          "at": "01:15"
+        },
+        {
+          "t": "Started training without uploading? Upload it now and contact your supervisor. Supervisors were only assigned after a letter was submitted.",
+          "src": "ama",
+          "at": "01:33"
+        },
+        {
+          "t": "If you did SIWES but submitted nothing on the LMS, you may need to start the process again. Email the SIWES coordinator.",
+          "src": "sheet"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do I submit my acceptance letter?",
+          "a": "You can submit your acceptance letter through the LMS, by navigating through the menu (click on the hamburger bar icon at the top of the LMS webpage), and select the 'Upload Acceptance Letter'. Then you are expected to fill the SIWES placement form with your appropriate details, and finally upload a copy of the acceptance letter (in PDF format)",
+          "src": "sheet"
+        },
+        {
+          "q": "I cannot find where to upload my acceptance letter.",
+          "a": "On the home screen of the LMS, navigate and click the menu dropdown beside your profile photo, then you will select 'Upload Acceptance Letter' from the drop down list to upload your acceptance letter and fill the SIWES placement form",
+          "src": "sheet"
+        },
+        {
+          "q": "Which letter do I upload?",
+          "a": "You are expected to upload a letter of acceptance from your organization of attachment on the LMS",
+          "src": "sheet"
+        },
+        {
+          "q": "I started training before I got my letter. Is that okay?",
+          "a": "Yes, go ahead and upload the acceptance letter on the LMS and reach out to your assigned supervisor for your vitual supervision",
+          "src": "sheet"
+        },
+        {
+          "q": "I did SIWES but never uploaded anything on the LMS.",
+          "a": "You will have to start the SIWES program all over again after you have submitted your acceptance letter on the LMS. You are expected to submit your acceptance letter at the begining of your SIWES to be assigned a supervisor, as well as inform the SIWES coordinator that you have commenced your industrial training. However, if you did not do this, and you have completed the SIWES program and are in contact without your industry-based supervisor, please reach out to the SIWES coordinator (augustus@miva.university)",
+          "src": "sheet"
+        },
+        {
+          "q": "I made a mistake in my submission.",
+          "a": "When you are uploading the necessary documents for your SIWES, please ensure that all details are correct before submitting as you would not have a chance to edit them personally once submitted. However, in the case of an error during/after submission, you can reach out to augustus@miva.university for corrections.",
+          "src": "sheet"
+        },
+        {
+          "q": "I got an email saying I did not enrol, but I did.",
+          "a": "Please ignore the mail as you have already confirmed your enrollment on the LMS. Reach out to the tagged email to confirm if they were assigned to you",
+          "src": "sheet"
+        },
+        {
+          "q": "I chose only SIWES II on the form but I am doing 6 months.",
+          "a": "If you're doing a 6-month SIWES, you're required to select both SIWES I & II when filling out your form. The question is a check box that will allow you to choose multiple options, however, if you've chosen only SIWES II, please don't worry about it, it will be rectified, just go ahead with your SIWES exercise.",
+          "src": "sheet"
+        },
+        {
+          "q": "My company extended me. Do I submit the letter again?",
+          "a": "No, if you have already submitted the first acceptance letter for SIWES I and have been retained by the same company for your SIWES II, you can continue your training without re-uploading another letter",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "scaf-itf",
+      "group": "Before you start",
+      "title": "SCAF form and ITF",
+      "icon": "stamp",
+      "blurb": "Fill it, stamp it, submit it to ITF.",
+      "keywords": [
+        "scaf",
+        "scarf",
+        "itf",
+        "stamp",
+        "sort code",
+        "bank",
+        "endorse",
+        "signature",
+        "form 8"
+      ],
+      "steps": [
+        "Download the SCAF form from the SIWES course materials on the LMS.",
+        "Fill it in. Put your start and end dates (for 6 months, write the full range).",
+        "Send it to the company to stamp and sign. Digital stamps work for remote firms.",
+        "Print the endorsed form.",
+        "Submit it to the ITF office nearest you, ideally before or at the start of training."
+      ],
+      "facts": [
+        {
+          "t": "The ITF office does not supervise you or ask for your logbook. Miva supervises and grades you.",
+          "src": "ama",
+          "at": "01:22"
+        },
+        {
+          "t": "Remote training does not stop you from submitting. ITF offices should accept it.",
+          "src": "ama",
+          "at": "01:08"
+        },
+        {
+          "t": "No ITF office near you? Search online for the closest branch, or use another branch.",
+          "src": "ama",
+          "at": "01:02"
+        },
+        {
+          "t": "Students outside Nigeria do not submit SCAF. The school handles ITF for them.",
+          "src": "sheet"
+        },
+        {
+          "t": "Not strictly compulsory, but the SCAF form is what lets the ITF process your payment.",
+          "src": "sheet"
+        },
+        {
+          "t": "Bank sort codes come from your bank.",
+          "src": "sheet"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is the ITF/SCAF form compulsory?",
+          "a": "It is not necessarily compulsory as the SCAF Form is needed to process the payments from ITF to you. However if you choose to submit it, you are expected to submit the SCAF Form to the nearest ITF office after securing a placement at the beginning of your industrial training. If your training is expected to run for six months at a stretch, you can specify so on the SCAF Form by specifying the start and end date of your industrial experience",
+          "src": "sheet"
+        },
+        {
+          "q": "How do I submit my SCAF form when I work remotely?",
+          "a": "You are expected to submit your SCAF Form after endorsing it with the accepting company's stamp and signature to the nearest ITF office in your area. You can download a soft copy of the SCAF Form from the SIWES course materials in the LMS, fill and endorse it virtually and print a physical copy for submission to the ITF office",
+          "src": "sheet"
+        },
+        {
+          "q": "I am doing 6 months at once. How do I submit the SCAF form?",
+          "a": "You are expected to submit your SCAF Form after endorsing it with the accepting company's stamp and signature to the nearest ITF office in your area. You can download a soft copy of the SCAF Form from the SIWES course materials in the LMS, fill and endorse it virtually and print a physical copy for submission to the ITF office",
+          "src": "sheet"
+        },
+        {
+          "q": "How will a remote company stamp the SCAF form?",
+          "a": "You can send the SCAF Form digitally for signature and stamp endorsement to remote firms, and then print the endorsed copy for physical submission",
+          "src": "sheet"
+        },
+        {
+          "q": "The nearest ITF office is inconvenient.",
+          "a": "Look for another branch to submit your SCAF Form if it is incovenient to submit to the one closest to you",
+          "src": "sheet"
+        },
+        {
+          "q": "I live abroad. How do I handle ITF?",
+          "a": "The school handles the necessary ITF submissions for the diasporan students",
+          "src": "sheet"
+        },
+        {
+          "q": "Where do I get bank sort codes?",
+          "a": "Once you have undergone at least two months of industrial training, kindly reach out to your assigned supervisor to let them know that you are ready for supervision to book a virtual supervision session with them online. Please note that your industry-based supervisor should be present on the virtual call. About where to get bank sort codes, you can inquire about your bank's sort codes directly from your bank",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "supervisor",
+      "group": "While you train",
+      "title": "Your supervisor",
+      "icon": "user",
+      "blurb": "Who they are and what to do if they go quiet.",
+      "keywords": [
+        "supervisor",
+        "assigned",
+        "not assigned",
+        "no supervisor",
+        "unresponsive",
+        "not responding",
+        "wrong supervisor",
+        "change supervisor",
+        "who is my supervisor",
+        "email"
+      ],
+      "steps": [
+        "Check your Miva email for a message from your assigned supervisor.",
+        "Not there? Confirm your acceptance letter went through (see Acceptance letter).",
+        "Reply to the supervisor's email to agree a time when you are ready.",
+        "Supervisor silent after a reminder? Email the SIWES coordinator."
+      ],
+      "facts": [
+        {
+          "t": "A supervisor is assigned after you upload your acceptance letter and fill the placement form.",
+          "src": "sheet"
+        },
+        {
+          "t": "Your supervisor stays with you through SIWES I and II, even if you move companies.",
+          "src": "ama",
+          "at": "01:53"
+        },
+        {
+          "t": "If someone says they are not your supervisor, ask them for the email of the correct one.",
+          "src": "ama",
+          "at": "01:04"
+        },
+        {
+          "t": "No supervisor after uploading your letter? Email the SIWES coordinator at augustus@miva.university.",
+          "src": "sheet"
+        },
+        {
+          "t": "Before booking, remind your supervisor or ask when suits them. If they still don't show, write to the SIWES coordinator.",
+          "src": "sheet"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do I know my assigned supervisor?",
+          "a": "After successfully submitting your acceptance letter on the LMS, a supervisor would be automatically assigned to you. They would reach out to you via email to let you know of their availability for your supervision",
+          "src": "sheet"
+        },
+        {
+          "q": "How will I be told who my supervisor is?",
+          "a": "You will be notified via email of who your SIWES supervisor will be once you have completed the necessary steps required when starting your SIWES placement, i.e., once you have uploaded your acceptance letter on the LMS and/or SCAF Form to the ITF office",
+          "src": "sheet"
+        },
+        {
+          "q": "How do I get my supervisor and book a session?",
+          "a": "Your assigned supervisor normally reaches out to you once you have uploaded your acceptance letter and filled out the SIWES placement form. If you have done these, please check your school-issued email to verify. However if you have done all that and still were not assigned a supervisor, please reach out to the SIWES coordinator (augustus@miva.university)",
+          "src": "sheet"
+        },
+        {
+          "q": "I uploaded my letter but have no supervisor.",
+          "a": "Please reach out to the SIWES coordinator (augustus@miva.university) to assign a supervisor to you for supervision",
+          "src": "sheet"
+        },
+        {
+          "q": "I finished SIWES but never got a supervisor.",
+          "a": "Please reach out to the SIWES coordinator (augustus@miva.university) to be assigned a supervisor to carry out your virtual supervision. Once you have completed SIWES I & SIWES II, and have been properly supervised, you can go ahead to upload your logbook and technical report on the LMS, and then reach out to your program coordinator to schedule a time for your defence. Please note that you won't be graded for your SIWES I if you did not undergo supervision",
+          "src": "sheet"
+        },
+        {
+          "q": "My supervisor does not show up for calls.",
+          "a": "Before booking sessions with your supervisor for your supervision, please send them a reminder or inquire from them when would be the best time for carrying out your supervision. And in a case they do not show up after being reminded, please reach out to augustus@miva.university",
+          "src": "sheet"
+        },
+        {
+          "q": "My supervisor has not replied for a long time.",
+          "a": "Kindly reach out to the SIWES coordinator via email to rectify this issue",
+          "src": "sheet"
+        },
+        {
+          "q": "My supervisor is very unresponsive.",
+          "a": "Please reach out to the SIWES coordinator (augustus@miva.university) for escalation",
+          "src": "sheet"
+        },
+        {
+          "q": "My supervisor is unresponsive after I reached out.",
+          "a": "You are expected to reach out to your assigned supervisor for supervision after you must have undergone at least two months of industrial training for SIWES I at your place of attachment. However in the case of an unresponsive supervisor even after reaching out to them, you can send an email to augustus@miva.university to sort out the problem",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "supervision",
+      "group": "While you train",
+      "title": "Virtual supervision",
+      "icon": "video",
+      "blurb": "The call that earns your SIWES I score.",
+      "keywords": [
+        "supervision",
+        "supervised",
+        "call",
+        "virtual",
+        "book session",
+        "industry supervisor",
+        "meeting",
+        "attest",
+        "two months",
+        "monitoring",
+        "deadline",
+        "score zero"
+      ],
+      "steps": [
+        "Train for at least 2 months.",
+        "Email your school supervisor from your Miva email and ask for a time.",
+        "Tell your industry supervisor the date. They must join the call.",
+        "Have your filled, signed logbook ready to show.",
+        "Join the call. Answer questions about what you did.",
+        "Afterwards, continue SIWES II and upload your logbook and report at the end."
+      ],
+      "facts": [
+        {
+          "t": "No supervision means no SIWES I score, even if you finished all 6 months and defended.",
+          "src": "sheet"
+        },
+        {
+          "t": "Your industry supervisor must be on the call. They confirm you did the work.",
+          "src": "sheet"
+        },
+        {
+          "t": "Supervision is for SIWES I. There is no separate supervision for SIWES II; you defend right after.",
+          "src": "sheet"
+        },
+        {
+          "t": "There is no fixed deadline, but finish and defend before 400L first semester.",
+          "src": "sheet"
+        },
+        {
+          "t": "You do not need to send updates beforehand. Updates are given on the call.",
+          "src": "sheet"
+        },
+        {
+          "t": "Remote or on-site, the link is the same: your supervisor sends a link and both of you join.",
+          "src": "ama",
+          "at": "01:50"
+        },
+        {
+          "t": "Missed supervision? Email your supervisor now and bring your industry supervisor to the call. Without them you can get a very low score.",
+          "src": "ama",
+          "at": "01:27"
+        },
+        {
+          "t": "A scored SIWES I can still be earned late if you get a supervisor and your industry supervisor attends.",
+          "src": "sheet"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "When do I contact my supervisor for supervision?",
+          "a": "You are expected to reach out to your assigned supervisor for supervision after you must have undergone at least two months of industrial training for SIWES I at your place of attachment. Note that there is no supervision for SIWES II as you are expected to carry out your defence immediately after completing the SIWES II",
+          "src": "sheet"
+        },
+        {
+          "q": "What if I skip supervision?",
+          "a": "Please reach out to your SIWES supervisor once you have undergone at least two months of industrial-training at your place of attachment for your virtual supervision. Note that your industry-based supervisor is expected to be on the supervision call to attest for you. No supervision results in no score for your SIWES I even if you completed the SIWES program, i.e. the entire six months at a stretch and have defended the course",
+          "src": "sheet"
+        },
+        {
+          "q": "How do I get supervised?",
+          "a": "You are supposed to contact your school-assigned supervisor once you feel you are ready for supervision (typically after two months into your industrial-training) via your school email. However, you are also expected to reach out to your industry-based supervisor to notify them to be present on the virtual supervision call to attest for you",
+          "src": "sheet"
+        },
+        {
+          "q": "How do I get supervised if my organisation is remote?",
+          "a": "You are to get in touch with both your school assigned supervisor and industry-based supervisor to book a session for a virtual supervision that aligns with everyone's availability",
+          "src": "sheet"
+        },
+        {
+          "q": "My company supervisor wants a different time for the call.",
+          "a": "Check in with your supervisor to agree on a time slot for a virtual supervision that aligns with your industry-based supervisor's availability",
+          "src": "sheet"
+        },
+        {
+          "q": "How many times will I be supervised?",
+          "a": "You are expected to reach out to your supervisor to book a session for your virtual supervision when you have undergone at least two months of training, where you are expected to present the filled and signed logbook. You are also advised to invite your industry-based supervisor as well on the supervision call to attest for your work",
+          "src": "sheet"
+        },
+        {
+          "q": "Is there a deadline for supervision?",
+          "a": "You are typically expected to contact your supervisor after two months of training at your place of attachment for your supervision, however while there is no deadline for supervision, you are expected to finish and defend your SIWES before your final year, i.e, 400L first semester",
+          "src": "sheet"
+        },
+        {
+          "q": "Do I send my supervisor updates during SIWES?",
+          "a": "Yes, you can submit your completed and duly signed SCAF Form to the nearest ITF office to you. Then you are expected to reach out to your supervisor at least two months into your industrial training to book a session your virtual supervision. There is no need for you to send updates of your SIWES to your supervisor as all updates will be given to them on the supervision call. Finally, you can download the softcopy logbook from the SIWES course materials on the LMS. It is advised to fill out your logbook virtually using any word/pdf editor as it would be easier for you when it is time to upload the filled logbook on the LMS.",
+          "src": "sheet"
+        },
+        {
+          "q": "What is SIWES monitoring?",
+          "a": "You will be assigned a supervisor after submitting your acceptance letter on the LMS, whom you will reach out to once you have completed at least two months of industrial training to book a session for a virtual supervision as part of the SIWES monitoring",
+          "src": "sheet"
+        },
+        {
+          "q": "I was graded for SIWES II but not SIWES I.",
+          "a": "This issue can arise if you were not supervised initiallyfor your SIWES I, therefore you are expected to reach out to your supervisor for supervision. However, note that your industry-based supervisor for your SIWES I should be present on the supervision call to attest for you",
+          "src": "sheet"
+        },
+        {
+          "q": "I finished SIWES without supervision. Can I still be scored?",
+          "a": "No, you cannot.Though, if you are able to reach out to your industry-based supervisor for SIWES I to be on a virtual supervision call with you alongside your school-assigned supervisor, you can still salvage the situation and be scored for supervision",
+          "src": "sheet"
+        },
+        {
+          "q": "I completed SIWES I but was not supervised. What now?",
+          "a": "Reach out to your school assigned supervisor to book a session for your virtual supervision. Note that your industry-based supervisor's presence is expected on the virtual supervision call",
+          "src": "sheet"
+        },
+        {
+          "q": "I defended before I was supervised.",
+          "a": "Reach out to your assigned supervisor via email to inquire from them the best time to begin your supervision. However, please note that you are expected to finish your SIWES supervision first before going for your SIWES defence. And in the case in which you completed the latter before being supervised, please reach out to your assigned supervisor immediately to be supervised as no supervision results in no score for your SIWES I",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "logbook",
+      "group": "While you train",
+      "title": "Logbook",
+      "icon": "notebook",
+      "blurb": "Where to get it, how to fill it, how to upload it.",
+      "keywords": [
+        "logbook",
+        "log book",
+        "organogram",
+        "organization structure",
+        "chart",
+        "weeks",
+        "fill",
+        "sign",
+        "scan",
+        "print",
+        "software",
+        "canva",
+        "word",
+        "edge",
+        "hard copy",
+        "soft copy"
+      ],
+      "steps": [
+        "Download the logbook from the SIWES course materials on the LMS.",
+        "Fill it digitally in Word, Microsoft Edge, or any PDF editor (recommended). Printing is allowed too.",
+        "Write what you did or learned each day.",
+        "Ask your industry supervisor to sign regularly.",
+        "Add the organisation chart (see below).",
+        "At the end, upload the complete signed logbook on the LMS (scan every page if it was printed)."
+      ],
+      "facts": [
+        {
+          "t": "The 'description of organisation structure' page needs the company's organogram: who leads the company and how teams report. Ask the company for an image, or draw it. Place it on that page.",
+          "src": "ama",
+          "at": "02:03"
+        },
+        {
+          "t": "Months with five weeks: keep filling into the next month's rows.",
+          "src": "ama",
+          "at": "01:47"
+        },
+        {
+          "t": "Hard copy is allowed. Soft copy is only a recommendation to make uploading easier.",
+          "src": "ama",
+          "at": "01:21"
+        },
+        {
+          "t": "Canva can also fill a PDF logbook: upload the PDF, add your photo or organogram, then download it as a PDF.",
+          "src": "ama",
+          "at": "01:59"
+        },
+        {
+          "t": "Logbook writing is different from report writing. The logbook records daily work; the report summarises your whole experience.",
+          "src": "sheet"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Where do I get my logbook?",
+          "a": "After regstering for the SIWES course, you are expected to go through the resources in the course. The SIWES Log book can be downloaded from the SIWES course materials in the LMS",
+          "src": "sheet"
+        },
+        {
+          "q": "Do I fill the logbook online or print it?",
+          "a": "You can fill your SIWES Log book on your computer using a word editor software like MS Word, or you can print the Log book out to manually fill it up, however, you would be required to scan each page and compile the entire log book accordingly to upload the final duly signed and filled log book on the LMS",
+          "src": "sheet"
+        },
+        {
+          "q": "Which software do I use to fill the logbook?",
+          "a": "You can use Microsoft Word, Microsoft Edge or any other preferred word/pdf editor to virtually fill the SIWES log book",
+          "src": "sheet"
+        },
+        {
+          "q": "What does soft copy of the logbook mean?",
+          "a": "By soft copy of the logbook, we mean a digitally filled logbook using a word/PDF editor of your choosing, like Microsoft Edge, Microsoft Word, etc",
+          "src": "sheet"
+        },
+        {
+          "q": "My logbook is physical. How do I get it signed and submit it?",
+          "a": "Once you have completed your SIWES and undergone supervision, you are expected to upload a scanned copy of the duly signed and filled physical log book on the LMS. Kindly reach out to your supervisor for signing after completely filling out the physical log book, scanning each page and compiling the pages accordingly",
+          "src": "sheet"
+        },
+        {
+          "q": "What is the difference between report writing and logbook writing?",
+          "a": "Report writing means writing a detailed report on your overall SIWES experience with your respective organization of attachment. A guideline on how what to include in the report can be accessed from the SIWES course materials on the LMS. Logbook writing in this case entails filling in your logbook digitally with the appropriate information expected for each field. There is only one defence that you will undergo which is expected to happen at the end of your SIWES II after you must have been supervised and have submitted your filled and signed logbook alongside your technical report on the LMS",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "technical-report",
+      "group": "Finish up",
+      "title": "Technical report",
+      "icon": "file",
+      "blurb": "One report for the whole programme.",
+      "keywords": [
+        "report",
+        "technical report",
+        "guidelines",
+        "format",
+        "slides",
+        "two organizations",
+        "two companies",
+        "submit report"
+      ],
+      "steps": [
+        "Open the technical report writing guidelines in the SIWES course materials.",
+        "Write one report that covers your whole SIWES experience.",
+        "Upload it with your signed logbook after SIWES II.",
+        "Prepare slides for your defence with the key points."
+      ],
+      "facts": [
+        {
+          "t": "You submit the report once, at the end of SIWES II. No separate 3-month report.",
+          "src": "sheet"
+        },
+        {
+          "t": "Trained at two organisations? One combined report is enough, and the slides should cover both.",
+          "src": "sheet"
+        },
+        {
+          "t": "Your grade depends on the report following the guidelines.",
+          "src": "sheet"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Do I submit a report for each 3 months?",
+          "a": "You are expected to only submit your technical report at the end of your SIWES II along with your filled logbook",
+          "src": "sheet"
+        },
+        {
+          "q": "I trained at two organisations. Do I write two reports?",
+          "a": "Since you would be defending both SIWES programs together, making a single report including both experiences should suffice. This also applies for the presentation slides, they should include key information about both trainings",
+          "src": "sheet"
+        },
+        {
+          "q": "I finished SIWES. What do I submit?",
+          "a": "If you have completed your SIWES I & II, and have undergone supervision, you are expected to submit your duly signed and filled logbook, and a technical report covering your experience through the LMS. After which you are supposed to reach out to your course coordinator for your defense",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "defence",
+      "group": "Finish up",
+      "title": "Defence",
+      "icon": "mic",
+      "blurb": "Book it, prepare for it, what is marked.",
+      "keywords": [
+        "defence",
+        "defense",
+        "presentation",
+        "present",
+        "weekend",
+        "graduating",
+        "cohort",
+        "background",
+        "dress",
+        "appearance",
+        "when"
+      ],
+      "steps": [
+        "Finish SIWES I and II and be supervised.",
+        "Upload your signed logbook and technical report on the LMS.",
+        "Email your program coordinator that you are ready. Get their address from your course rep or success advisor.",
+        "Agree a date. Defences are usually held in working hours, not weekends.",
+        "Present on Meet. Present alone: it is individual.",
+        "Present your experience clearly."
+      ],
+      "facts": [
+        {
+          "t": "Marks come from your technical report, your presentation, and how you present yourself.",
+          "src": "sheet"
+        },
+        {
+          "t": "A virtual background is fine if yours is untidy.",
+          "src": "sheet"
+        },
+        {
+          "t": "Missed the cohort defence window? Contact your program coordinator to reschedule.",
+          "src": "sheet"
+        },
+        {
+          "t": "There is only one defence, at the end of SIWES II.",
+          "src": "sheet"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do grading and the defence go?",
+          "a": "You are graded based on your technical report, which should follow the format provided by the technical report writing guidelines on the LMS, your appearance during the presentation, and your overall presentation of your SIWES experience",
+          "src": "sheet"
+        },
+        {
+          "q": "Is the defence individual or group?",
+          "a": "SIWES defense is presented individually",
+          "src": "sheet"
+        },
+        {
+          "q": "I finished both SIWES parts. How do I get my defence?",
+          "a": "Once you have completed both SIWES I & II and have undergone supervision, you are expected to submit the duly signed and filled log book on the LMS alongside a comprehesive technical report of your experience. Then you are expected to reach out to your course/program coordinator via email to inform them that you are ready for your defense. You can get the email of your program coordinator through your department course representative or ask your success advisor",
+          "src": "sheet"
+        },
+        {
+          "q": "I finished long ago but have not defended.",
+          "a": "Please reach out to your program coordinator to agree on a date for your defence",
+          "src": "sheet"
+        },
+        {
+          "q": "I missed the defence window with my cohort.",
+          "a": "Reach out to your program coordinator to schedule a suitable time for your defence",
+          "src": "sheet"
+        },
+        {
+          "q": "Does what I wear or my background affect my grade?",
+          "a": "Your SIWES grading will be based on your appearance as well as other factors from your presentation, however you are free to use a background provided by Google Meet if your background isn't presentable during the presentation.",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "grading",
+      "group": "Finish up",
+      "title": "Scores",
+      "icon": "chart",
+      "blurb": "How you get graded and fixing missing scores.",
+      "keywords": [
+        "score",
+        "grade",
+        "graded",
+        "zero",
+        "0",
+        "result",
+        "missing",
+        "cgpa",
+        "gpa",
+        "not graded"
+      ],
+      "steps": [
+        "Check you were supervised for SIWES I.",
+        "Check you uploaded your logbook and report and have defended.",
+        "Still no score? Email the SIWES coordinator with your matric number and what you submitted."
+      ],
+      "facts": [
+        {
+          "t": "You are graded once you finish training, are supervised (usually in SIWES I) and defend both SIWES I and II.",
+          "src": "sheet"
+        },
+        {
+          "t": "No supervision for SIWES I means no SIWES I score. You can fix it with a late supervision with your industry supervisor present.",
+          "src": "sheet"
+        },
+        {
+          "t": "A score of zero often means a missing acceptance letter or supervision. Once fixed, the score updates. It may not appear on your side immediately.",
+          "src": "ama",
+          "at": "01:35"
+        },
+        {
+          "t": "Finishing later than your cohort does not lower your result, but your grades may be released later.",
+          "src": "sheet"
+        },
+        {
+          "t": "To do well: keep your logbook daily, get it signed, be supervised, write a good report, defend well.",
+          "src": "sheet"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do I know I have been graded?",
+          "a": "You will be graded for SIWES once you have completed your industrial training, have been supervised by your assigned supervisor (typically during your SIWES I), and have finally defended both SIWES I & SIWES II. You can reach out to augustus@miva.university for issues regarding misassignment of supervisors",
+          "src": "sheet"
+        },
+        {
+          "q": "I was supervised but my SIWES I score is zero.",
+          "a": "Note that you will not be scored for SIWES I if you were not supervised for it. However, if you were supervised and still did not get scored, please reach out to the SIWES coordinator (augustus@miva.university) to rectify this",
+          "src": "sheet"
+        },
+        {
+          "q": "I defended but my SIWES I has no grade.",
+          "a": "Please note that SIWES I will be graded if you initially underwent supervision with your assigned supervisor after at least two months into your industrial training for SIWES I. However, if you are done with SIWES II, but still have an assigned supervisor and can get your industry-based supervisor to attest for you on the virtual supervision, you can then to be graded for SIWES I",
+          "src": "sheet"
+        },
+        {
+          "q": "Only SIWES II was graded. Why?",
+          "a": "Please note that your SIWES I will not be graded if you were not supervised by your assigned supervisor during the course of your industrial training",
+          "src": "sheet"
+        },
+        {
+          "q": "What do you expect from us to score well?",
+          "a": "If you do the necessary work required from you during your SIWES program, such as filling your logbook daily with what you achieved or learned for that day at your place of attachment, getting the logbook signed by your industry-based supervisor regularly, being properly supervised, writing a good technical report, and defending your SIWES experience appropriately, you do not need to worry about low scores on your final assessment",
+          "src": "sheet"
+        },
+        {
+          "q": "Will finishing after my final exam affect my result?",
+          "a": "No, it will not affect your result. However, note that it can result to later releases of your SIWES grades",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "timeline-eligibility",
+      "group": "Your situation",
+      "title": "Levels and deadlines",
+      "icon": "calendar",
+      "blurb": "300L, 400L, direct entry, deferring a semester.",
+      "keywords": [
+        "400",
+        "400l",
+        "400 level",
+        "final year",
+        "graduate",
+        "graduation",
+        "direct entry",
+        "de",
+        "300",
+        "defer",
+        "deferment",
+        "enrol",
+        "enroll",
+        "late",
+        "missed",
+        "behind",
+        "carry over"
+      ],
+      "steps": [],
+      "facts": [
+        {
+          "t": "You cannot enrol for 400L until SIWES is complete. The one exception in the written answers: if you have already started and will finish within 400L first semester (for example SIWES I done, SIWES II running), you can still enrol. Confirm your case with the coordinator.",
+          "src": "sheet"
+        },
+        {
+          "t": "If you reach 400L without SIWES, finish it before your final exams, or you will carry the course over into a new semester. That extends your graduation date.",
+          "src": "sheet"
+        },
+        {
+          "t": "Started SIWES in 300L second semester and will finish in 400L first semester as a continuous 6 months? You do not have to defer 400L unless the workload is too much.",
+          "src": "sheet"
+        },
+        {
+          "t": "Direct entry (DE) students joining at 300L do only SIWES II (3 months), before the final year.",
+          "src": "sheet"
+        },
+        {
+          "t": "You can defer a semester to focus only on SIWES. It pushes your graduation date back a semester. Talk to your success advisor.",
+          "src": "sheet"
+        },
+        {
+          "t": "Starting late (for example in 300L second semester)? Start now, and finish SIWES I and II before you enrol for 400L.",
+          "src": "sheet"
+        },
+        {
+          "t": "No deferral is needed just because you are doing SIWES in 300L. You do not have to defer. Defer only if the load is too heavy.",
+          "src": "ama",
+          "at": "01:15"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Must I finish SIWES before 400L?",
+          "a": "You are expected to be done with SIWES before going into your final year, i.e. 400L first semester. You cannot enrol into your final year without completing the SIWES program. As for those who are already in 400L and have not started or are starting their SIWES, try to complete the SIWES program before your final year exams, or else you would have to carry-over the course to the next academic semester, i.e. doing the SIWES as a standalone course in a new semester. Note that the latter results in an extension of your expected graduation date",
+          "src": "sheet"
+        },
+        {
+          "q": "I skipped it in 200L. Can I do it in 400L?",
+          "a": "No, you will not be allowed to enroll for 400 level without completing your SIWES",
+          "src": "sheet"
+        },
+        {
+          "q": "I finished 400L without SIWES. What now?",
+          "a": "You are still expected to complete your SIWES to fulfill all the necessary requirements for graduation. You can re-register the SIWES courses after getting a place of attachment, and complete your training, supervision and defense to be able to graduate",
+          "src": "sheet"
+        },
+        {
+          "q": "I am in 300L second semester and have not started.",
+          "a": "You will have to defer your 400 level until you have completed the SIWES program",
+          "src": "sheet"
+        },
+        {
+          "q": "Do I have to defer 300L second semester or 400L?",
+          "a": "You can complete your 300 level second semester, however, if you are yet to begin your SIWES by then, you will not be allowed to enroll for 400 level. That is, you will be deferring your 400 level first semester until you complete the program",
+          "src": "sheet"
+        },
+        {
+          "q": "I will finish SIWES in 400L first semester. Must I defer?",
+          "a": "If you have started your SIWES in 300L second semester, and plan to complete the six months of industrial training by 400L first semester, i.e. a six months stretch, there is no need for you to defer the 400L first semester unless the workload is too much for you during your final year",
+          "src": "sheet"
+        },
+        {
+          "q": "I am a 300L direct-entry student. Which SIWES do I do?",
+          "a": "As a 300L DE student, you are expected to only carry enroll for SIWES II. You should complete your SIWES program before your final year. You would not be allowed to enroll to your final year until you have done so",
+          "src": "sheet"
+        },
+        {
+          "q": "Can a direct-entry student start SIWES in 300L?",
+          "a": "If you have already started your SIWES as a 300L DE student before going into your final year, you can enroll into your final year, else you would be required to complete the program before proceeding to the next level",
+          "src": "sheet"
+        },
+        {
+          "q": "Can I finish both parts before 300L?",
+          "a": "Yes, you can complete SIWES I & SIWES II before starting your 300L first semester. You can always apply to defer a semester to focus only on SIWES if the workload is too much for you.",
+          "src": "sheet"
+        },
+        {
+          "q": "Can I start during the holiday?",
+          "a": "If you are able to secure a placement for SIWES early in your 200L First semester, please do not hesitate to start your industrial training to enable you complete the program on time. However, if you wish to take the SIWES as a standalone course for an entire semester, you are allowed to do so, but note that this means deferring the semester for other academic studies",
+          "src": "sheet"
+        },
+        {
+          "q": "Can I start SIWES I in 200L first semester?",
+          "a": "Yes, you can as long as you complete both SIWES programs before your final year",
+          "src": "sheet"
+        },
+        {
+          "q": "Can I defer my studies to focus on SIWES?",
+          "a": "It is totally understandable how much the academic load becomes while undergoing your SIWES, therefore, you are able to defer your studies to focus solely on your SIWES, and continue after you are done, however note that course deferments result in extension of your graduation date as it sets you back a semester. Reach out to your success advisor to for more enquiries about course/semester deferments, and how to help you flexibly structure your study to fit your schedule",
+          "src": "sheet"
+        },
+        {
+          "q": "What if my placement is shorter than 3 months?",
+          "a": "The SIWES program runs for six months which is split into three months individually for SIWES I & SIWES II. You are expected to complete both program to be eligible for graduation. Therefore, if you can find another placement to complete the SIWES, please go ahead to do so",
+          "src": "sheet"
+        },
+        {
+          "q": "Can I do the two parts separately?",
+          "a": "Typically, you should complete the SIWES program consectively, i.e six months of industrial training. However, if you only get a three-month internship placement at an organization without being retained for another three months to complete your SIWES II, you can complete your SIWES II whenever you get another placement at an organization. Therefore, you can complete both SIWES programs consecutively or separately depending on your duration of industrial attachment. For the documents needed for submission to the school, you are to get an acceptance letter from the organization of SIWES placement and upload it to the LMS to notify the SIWES coordinator that you have officially begun your SIWES industrial training",
+          "src": "sheet"
+        },
+        {
+          "q": "Can I shorten SIWES II as a final-year student?",
+          "a": "No, you cannot shorten the SIWES II. You can however, complete your SIWES II once you are done with your final exams",
+          "src": "sheet"
+        }
+      ]
+    },
+    {
+      "id": "help",
+      "group": "Your situation",
+      "title": "Special cases and contacts",
+      "icon": "help",
+      "blurb": "Who to contact when things go wrong.",
+      "keywords": [
+        "contact",
+        "email",
+        "ticket",
+        "complain",
+        "escalate",
+        "emergency",
+        "accident",
+        "special",
+        "help",
+        "recording",
+        "success advisor",
+        "coordinator",
+        "international",
+        "italy"
+      ],
+      "steps": [
+        "Try the step-by-step help for your topic first.",
+        "Still stuck? Email the SIWES coordinator from your Miva email: augustus@miva.university.",
+        "Say your name, matric number, SIWES level and what you have already done.",
+        "For tuition, deferment or course load, talk to your success advisor."
+      ],
+      "facts": [
+        {
+          "t": "SIWES coordinator: augustus@miva.university. Use your Miva student email, not a personal one.",
+          "src": "sheet"
+        },
+        {
+          "t": "Unusual cases (an accident, illness, living abroad with work rules) go to the coordinator, who will look at the rules with you.",
+          "src": "ama",
+          "at": "01:13"
+        },
+        {
+          "t": "The AMA recording is posted on the LMS.",
+          "src": "sheet"
+        },
+        {
+          "t": "Do not post your matric number or personal details in this chat.",
+          "src": "policy"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "An emergency stopped my SIWES. What can I do?",
+          "a": "Please reach out to augustus@miva.university for specialized cases (e.g. unprecented accidents, etc) that prevents you from carrying out your SIWES.",
+          "src": "sheet"
+        },
+        {
+          "q": "I want advice on my placement.",
+          "a": "Yes, you can, however please reach out to the SIWES coordinator via email (augustus@miva.university) to inform him so as to guide you during the entire process",
+          "src": "sheet"
+        },
+        {
+          "q": "I am unhappy with my current organisation.",
+          "a": "Please note that since you have not yet been supervised for your previous SIWES and have not completed your SIWES defense, you do not have a score for the exercise at this time. Therefore, if you feel that you have not gained the skills and experience you expected from your current organisation, you may proceed to apply to another organisation for your SIWES. However, I would like to remind you that you are required to complete both SIWES I and SIWES II before you can register for your courses in 400L. If starting your SIWES afresh with another organisation may delay your progression to 400L, I encourage you to carefully consider your options before making a decision. I hope this clarifies your query.",
+          "src": "sheet"
+        },
+        {
+          "q": "Where is the AMA recording?",
+          "a": "The SIWES AMA session recording will be made available on the LMS once the session concludes",
+          "src": "sheet"
+        },
+        {
+          "q": "There is an error in my SIWES record.",
+          "a": "Please reach out to the SIWES coordinator (augustus@miva.university) to rectify this",
+          "src": "sheet"
+        }
+      ]
+    }
+  ]
+}

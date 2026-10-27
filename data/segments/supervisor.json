@@ -1,0 +1,96 @@
+{
+  "id": "supervisor",
+  "group": "While you train",
+  "title": "Your supervisor",
+  "icon": "user",
+  "blurb": "Who they are and what to do if they go quiet.",
+  "keywords": [
+    "supervisor",
+    "assigned",
+    "not assigned",
+    "no supervisor",
+    "unresponsive",
+    "not responding",
+    "wrong supervisor",
+    "change supervisor",
+    "who is my supervisor",
+    "email"
+  ],
+  "steps": [
+    "Check your Miva email for a message from your assigned supervisor.",
+    "Not there? Confirm your acceptance letter went through (see Acceptance letter).",
+    "Reply to the supervisor's email to agree a time when you are ready.",
+    "Supervisor silent after a reminder? Email the SIWES coordinator."
+  ],
+  "facts": [
+    {
+      "t": "A supervisor is assigned after you upload your acceptance letter and fill the placement form.",
+      "src": "sheet"
+    },
+    {
+      "t": "Your supervisor stays with you through SIWES I and II, even if you move companies.",
+      "src": "ama",
+      "at": "01:53"
+    },
+    {
+      "t": "If someone says they are not your supervisor, ask them for the email of the correct one.",
+      "src": "ama",
+      "at": "01:04"
+    },
+    {
+      "t": "No supervisor after uploading your letter? Email the SIWES coordinator at augustus@miva.university.",
+      "src": "sheet"
+    },
+    {
+      "t": "Before booking, remind your supervisor or ask when suits them. If they still don't show, write to the SIWES coordinator.",
+      "src": "sheet"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I know my assigned supervisor?",
+      "a": "After successfully submitting your acceptance letter on the LMS, a supervisor would be automatically assigned to you. They would reach out to you via email to let you know of their availability for your supervision",
+      "src": "sheet"
+    },
+    {
+      "q": "How will I be told who my supervisor is?",
+      "a": "You will be notified via email of who your SIWES supervisor will be once you have completed the necessary steps required when starting your SIWES placement, i.e., once you have uploaded your acceptance letter on the LMS and/or SCAF Form to the ITF office",
+      "src": "sheet"
+    },
+    {
+      "q": "How do I get my supervisor and book a session?",
+      "a": "Your assigned supervisor normally reaches out to you once you have uploaded your acceptance letter and filled out the SIWES placement form. If you have done these, please check your school-issued email to verify. However if you have done all that and still were not assigned a supervisor, please reach out to the SIWES coordinator (augustus@miva.university)",
+      "src": "sheet"
+    },
+    {
+      "q": "I uploaded my letter but have no supervisor.",
+      "a": "Please reach out to the SIWES coordinator (augustus@miva.university) to assign a supervisor to you for supervision",
+      "src": "sheet"
+    },
+    {
+      "q": "I finished SIWES but never got a supervisor.",
+      "a": "Please reach out to the SIWES coordinator (augustus@miva.university) to be assigned a supervisor to carry out your virtual supervision. Once you have completed SIWES I & SIWES II, and have been properly supervised, you can go ahead to upload your logbook and technical report on the LMS, and then reach out to your program coordinator to schedule a time for your defence. Please note that you won't be graded for your SIWES I if you did not undergo supervision",
+      "src": "sheet"
+    },
+    {
+      "q": "My supervisor does not show up for calls.",
+      "a": "Before booking sessions with your supervisor for your supervision, please send them a reminder or inquire from them when would be the best time for carrying out your supervision. And in a case they do not show up after being reminded, please reach out to augustus@miva.university",
+      "src": "sheet"
+    },
+    {
+      "q": "My supervisor has not replied for a long time.",
+      "a": "Kindly reach out to the SIWES coordinator via email to rectify this issue",
+      "src": "sheet"
+    },
+    {
+      "q": "My supervisor is very unresponsive.",
+      "a": "Please reach out to the SIWES coordinator (augustus@miva.university) for escalation",
+      "src": "sheet"
+    },
+    {
+      "q": "My supervisor is unresponsive after I reached out.",
+      "a": "You are expected to reach out to your assigned supervisor for supervision after you must have undergone at least two months of industrial training for SIWES I at your place of attachment. However in the case of an unresponsive supervisor even after reaching out to them, you can send an email to augustus@miva.university to sort out the problem",
+      "src": "sheet"
+    }
+  ]
+}

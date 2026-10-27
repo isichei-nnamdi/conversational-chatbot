@@ -1,0 +1,29 @@
+name: Deploy server to Hugging Face Space
+
+on:
+  push:
+    branches: [main]
+    paths: ["server/**", ".github/workflows/deploy-space.yml"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HF_USER: AustinWealth
+      HF_SPACE: cc-space
+    steps:
+      - uses: actions/checkout@v4
+      - name: Push the server folder to the Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git clone "https://${HF_USER}:${HF_TOKEN}@huggingface.co/spaces/${HF_USER}/${HF_SPACE}" space
+          rsync -a --delete --exclude '.git' --exclude 'node_modules' --exclude '.env' --exclude 'test' server/ space/
+          cd space
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "Nothing to deploy" && exit 0
+          git commit -m "Deploy ${GITHUB_SHA::7}"
+          git push

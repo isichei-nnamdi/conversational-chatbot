@@ -1,0 +1,91 @@
+{
+  "id": "logbook",
+  "group": "While you train",
+  "title": "Logbook",
+  "icon": "notebook",
+  "blurb": "Where to get it, how to fill it, how to upload it.",
+  "keywords": [
+    "logbook",
+    "log book",
+    "organogram",
+    "organization structure",
+    "chart",
+    "weeks",
+    "fill",
+    "sign",
+    "scan",
+    "print",
+    "software",
+    "canva",
+    "word",
+    "edge",
+    "hard copy",
+    "soft copy"
+  ],
+  "steps": [
+    "Download the logbook from the SIWES course materials on the LMS.",
+    "Fill it digitally in Word, Microsoft Edge, or any PDF editor (recommended). Printing is allowed too.",
+    "Write what you did or learned each day.",
+    "Ask your industry supervisor to sign regularly.",
+    "Add the organisation chart (see below).",
+    "At the end, upload the complete signed logbook on the LMS (scan every page if it was printed)."
+  ],
+  "facts": [
+    {
+      "t": "The 'description of organisation structure' page needs the company's organogram: who leads the company and how teams report. Ask the company for an image, or draw it. Place it on that page.",
+      "src": "ama",
+      "at": "02:03"
+    },
+    {
+      "t": "Months with five weeks: keep filling into the next month's rows.",
+      "src": "ama",
+      "at": "01:47"
+    },
+    {
+      "t": "Hard copy is allowed. Soft copy is only a recommendation to make uploading easier.",
+      "src": "ama",
+      "at": "01:21"
+    },
+    {
+      "t": "Canva can also fill a PDF logbook: upload the PDF, add your photo or organogram, then download it as a PDF.",
+      "src": "ama",
+      "at": "01:59"
+    },
+    {
+      "t": "Logbook writing is different from report writing. The logbook records daily work; the report summarises your whole experience.",
+      "src": "sheet"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Where do I get my logbook?",
+      "a": "After regstering for the SIWES course, you are expected to go through the resources in the course. The SIWES Log book can be downloaded from the SIWES course materials in the LMS",
+      "src": "sheet"
+    },
+    {
+      "q": "Do I fill the logbook online or print it?",
+      "a": "You can fill your SIWES Log book on your computer using a word editor software like MS Word, or you can print the Log book out to manually fill it up, however, you would be required to scan each page and compile the entire log book accordingly to upload the final duly signed and filled log book on the LMS",
+      "src": "sheet"
+    },
+    {
+      "q": "Which software do I use to fill the logbook?",
+      "a": "You can use Microsoft Word, Microsoft Edge or any other preferred word/pdf editor to virtually fill the SIWES log book",
+      "src": "sheet"
+    },
+    {
+      "q": "What does soft copy of the logbook mean?",
+      "a": "By soft copy of the logbook, we mean a digitally filled logbook using a word/PDF editor of your choosing, like Microsoft Edge, Microsoft Word, etc",
+      "src": "sheet"
+    },
+    {
+      "q": "My logbook is physical. How do I get it signed and submit it?",
+      "a": "Once you have completed your SIWES and undergone supervision, you are expected to upload a scanned copy of the duly signed and filled physical log book on the LMS. Kindly reach out to your supervisor for signing after completely filling out the physical log book, scanning each page and compiling the pages accordingly",
+      "src": "sheet"
+    },
+    {
+      "q": "What is the difference between report writing and logbook writing?",
+      "a": "Report writing means writing a detailed report on your overall SIWES experience with your respective organization of attachment. A guideline on how what to include in the report can be accessed from the SIWES course materials on the LMS. Logbook writing in this case entails filling in your logbook digitally with the appropriate information expected for each field. There is only one defence that you will undergo which is expected to happen at the end of your SIWES II after you must have been supervised and have submitted your filled and signed logbook alongside your technical report on the LMS",
+      "src": "sheet"
+    }
+  ]
+}

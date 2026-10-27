@@ -1,0 +1,17 @@
+{
+  "name": "siwes-guide",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": ["server", "web"],
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm run dev -w server\" \"npm run dev -w web\"",
+    "build": "npm run build -w web",
+    "start": "npm start -w server",
+    "kb": "echo Run: python scripts/build_kb.py <qa_flat.json>",
+    "test": "npm test -w server && npm run build -w web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "defence",
+  "group": "Finish up",
+  "title": "Defence",
+  "icon": "mic",
+  "blurb": "Book it, prepare for it, what is marked.",
+  "keywords": [
+    "defence",
+    "defense",
+    "presentation",
+    "present",
+    "weekend",
+    "graduating",
+    "cohort",
+    "background",
+    "dress",
+    "appearance",
+    "when"
+  ],
+  "steps": [
+    "Finish SIWES I and II and be supervised.",
+    "Upload your signed logbook and technical report on the LMS.",
+    "Email your program coordinator that you are ready. Get their address from your course rep or success advisor.",
+    "Agree a date. Defences are usually held in working hours, not weekends.",
+    "Present on Meet. Present alone: it is individual.",
+    "Present your experience clearly."
+  ],
+  "facts": [
+    {
+      "t": "Marks come from your technical report, your presentation, and how you present yourself.",
+      "src": "sheet"
+    },
+    {
+      "t": "A virtual background is fine if yours is untidy.",
+      "src": "sheet"
+    },
+    {
+      "t": "Missed the cohort defence window? Contact your program coordinator to reschedule.",
+      "src": "sheet"
+    },
+    {
+      "t": "There is only one defence, at the end of SIWES II.",
+      "src": "sheet"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do grading and the defence go?",
+      "a": "You are graded based on your technical report, which should follow the format provided by the technical report writing guidelines on the LMS, your appearance during the presentation, and your overall presentation of your SIWES experience",
+      "src": "sheet"
+    },
+    {
+      "q": "Is the defence individual or group?",
+      "a": "SIWES defense is presented individually",
+      "src": "sheet"
+    },
+    {
+      "q": "I finished both SIWES parts. How do I get my defence?",
+      "a": "Once you have completed both SIWES I & II and have undergone supervision, you are expected to submit the duly signed and filled log book on the LMS alongside a comprehesive technical report of your experience. Then you are expected to reach out to your course/program coordinator via email to inform them that you are ready for your defense. You can get the email of your program coordinator through your department course representative or ask your success advisor",
+      "src": "sheet"
+    },
+    {
+      "q": "I finished long ago but have not defended.",
+      "a": "Please reach out to your program coordinator to agree on a date for your defence",
+      "src": "sheet"
+    },
+    {
+      "q": "I missed the defence window with my cohort.",
+      "a": "Reach out to your program coordinator to schedule a suitable time for your defence",
+      "src": "sheet"
+    },
+    {
+      "q": "Does what I wear or my background affect my grade?",
+      "a": "Your SIWES grading will be based on your appearance as well as other factors from your presentation, however you are free to use a background provided by Google Meet if your background isn't presentable during the presentation.",
+      "src": "sheet"
+    }
+  ]
+}

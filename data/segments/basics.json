@@ -1,0 +1,155 @@
+{
+  "id": "basics",
+  "group": "Start here",
+  "title": "What SIWES is",
+  "icon": "book",
+  "blurb": "Duration, who does it, what it costs.",
+  "keywords": [
+    "siwes",
+    "what is",
+    "duration",
+    "months",
+    "compulsory",
+    "tuition",
+    "pay",
+    "paid",
+    "salary",
+    "departments",
+    "internship",
+    "100 level",
+    "100l",
+    "200l",
+    "300l"
+  ],
+  "steps": [],
+  "facts": [
+    {
+      "t": "SIWES is compulsory industrial training. You need it to graduate.",
+      "src": "sheet"
+    },
+    {
+      "t": "It lasts 6 months in total: SIWES I (3 months, 200L) and SIWES II (3 months, 300L).",
+      "src": "sheet"
+    },
+    {
+      "t": "You register for the SIWES course in your 200L first semester. Training officially starts in 200L second semester, but you can start earlier if you find a placement.",
+      "src": "sheet"
+    },
+    {
+      "t": "You cannot do SIWES I and II at the same time. Each part is 3 months. You can do them back to back (6 months at one place) or separately.",
+      "src": "sheet"
+    },
+    {
+      "t": "The month you start counts as month one, whatever the start date.",
+      "src": "sheet"
+    },
+    {
+      "t": "Your date of start for the school is the day your acceptance letter is submitted. Submit it early.",
+      "src": "ama",
+      "at": "01:09"
+    },
+    {
+      "t": "100L students do not do SIWES yet. It starts at 200L.",
+      "src": "ama",
+      "at": "01:50"
+    },
+    {
+      "t": "Experience does not exempt you. Even people with 10+ years of work experience must do it.",
+      "src": "sheet"
+    },
+    {
+      "t": "School of Computing departments call it SIWES. Other schools (for example mass communication, economics, public policy) call it an internship and use their own program coordinator.",
+      "src": "ama",
+      "at": "01:41"
+    },
+    {
+      "t": "Your normal classes and exams continue during SIWES.",
+      "src": "sheet"
+    },
+    {
+      "t": "Your tuition already covers the whole SIWES programme, even if it runs past your session.",
+      "src": "sheet"
+    },
+    {
+      "t": "Companies are not guaranteed to pay you.",
+      "src": "sheet"
+    },
+    {
+      "t": "You do not need to be at the company every day. Two or three days a week is fine if you learn something and record it in your logbook.",
+      "src": "ama",
+      "at": "01:40"
+    },
+    {
+      "t": "Spot checks happen. Some students have been visited to confirm their placement. A false claim means retaking SIWES.",
+      "src": "ama",
+      "at": "01:15"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long is SIWES and when does it start?",
+      "a": "The SIWES program runs for a total of six months, however the program is divided into SIWES I and SIWES II which runs for three months individually in your 200L and 300L respectively. You are expected to register for the SIWES course in your 200L first semester and go through the SIWES course materials. Then, you are expected to commence the SIWES program during the second semester of your second year at Miva. However, if you are able to secure a SIWES placement before the official commencement of the program, do not hesitate or wait to start the program in the second semester",
+      "src": "sheet"
+    },
+    {
+      "q": "Can I wait until 300L to start?",
+      "a": "The SIWES program officially commences of the second semester of your 200L through the first semseter of your 300L. However, if you are able to secure a placement for your SIWES during the first semsester of your 200L, do not hesitate to begin your training. But note that you are expected to complete your training at a company/role relevant to your course of study",
+      "src": "sheet"
+    },
+    {
+      "q": "Should I start before or after my exams?",
+      "a": "You can begin the SIWES any time during your 200L, however going for the industrial training program officially commences in your 200L second semester. Therefore, it is advisable to to begin before your exams so that you can conclude the three months (SIWES I) before your semester exams commences",
+      "src": "sheet"
+    },
+    {
+      "q": "How is the 3-month period counted?",
+      "a": "Please note that the SIWES program period runs for three months individually for SIWES I & II from the date of commencement of training at your place of attachment till the end of your training. This means that the month you commenced training counts as one month regardless of the start date of that month",
+      "src": "sheet"
+    },
+    {
+      "q": "Can I do SIWES I and II at the same time?",
+      "a": "No, you cannot do both SIWES at once, each of the SIIWES program runs for 3 months individually, therefore you are expected to complete 6 months of industrial training. In the case of working at a clothing company, if you have a tech initiative or solution that will help the clothing company, or if the clothing company has a department relevant to your course of study, you can carry out your SIWES there",
+      "src": "sheet"
+    },
+    {
+      "q": "If I register SIWES I for 6 months, does it cover SIWES II?",
+      "a": "Yes",
+      "src": "sheet"
+    },
+    {
+      "q": "I have 10+ years of work experience. Do I still need SIWES?",
+      "a": "Yes, regardless of your years of experience in a field, SIWES is a compulsory course every Nigerian university student takes as part of fulfilling the necessary requirements for graduation",
+      "src": "sheet"
+    },
+    {
+      "q": "Is SIWES only for the School of Computing?",
+      "a": "Other departments go for internships at their required time, however all school of computing departments go for SIWES",
+      "src": "sheet"
+    },
+    {
+      "q": "Do my classes stop while I do SIWES?",
+      "a": "No, typically all studies continue while you are undergoing the SIWES program, however, if the academic load seems too much for you while doing your SIWES, you can choose to defer the other courses to solely focus on your SIWES. However, please note that deferring courses can result to an extension of your graduation date. Reach out to your success advisor for more inquiries about restructuring your program",
+      "src": "sheet"
+    },
+    {
+      "q": "Do I write exams with everyone else?",
+      "a": "Please note that normal academic studies continue regardless of if a student is or is not undergoing their SIWES attachment",
+      "src": "sheet"
+    },
+    {
+      "q": "Do I pay extra tuition if SIWES runs past my session?",
+      "a": "No, you are not required to pay another session's tuition, your already paid tuition covers for the enirtety of the SIWES program. Therefore, you can complete the SIWES program if you yet to finish it under your current registration. You can still contact your success advisor if you need more clarifications regarding tuition payments",
+      "src": "sheet"
+    },
+    {
+      "q": "Will the companies pay me?",
+      "a": "Please note that financial compensation is not guaranteed from companies during your SIWES training",
+      "src": "sheet"
+    },
+    {
+      "q": "How do I balance SIWES and school work?",
+      "a": "You can always defer a semester to focus only on SIWES if the workload is too much for you, i.e. taking SIWES as a standalone course for an entire semester. Though be aware that deferring a semester extends your graduation date",
+      "src": "sheet"
+    }
+  ]
+}

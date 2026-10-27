@@ -1,0 +1,16 @@
+#!/bin/sh
+# Runs the tests, and flags changes to the WATCHED constants so they are deliberate.
+set -e
+
+FILE=server/src/constants.js
+if git diff --cached --quiet -- "$FILE"; then :; else
+  changed=$(git diff --cached -U0 -- "$FILE" | grep -E '^[+-]export const .*// WATCHED' || true)
+  if [ -n "$changed" ]; then
+    echo "Watched constants changed in $FILE:"
+    echo "$changed"
+    echo "If this is intended, commit with: CONSTANTS_OK=1 git commit ..."
+    [ "$CONSTANTS_OK" = "1" ] || exit 1
+  fi
+fi
+
+npm test

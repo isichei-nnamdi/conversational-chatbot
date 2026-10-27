@@ -1,0 +1,176 @@
+{
+  "id": "placement",
+  "group": "Before you start",
+  "title": "Finding a placement",
+  "icon": "building",
+  "blurb": "Where to train, remote options, your own workplace.",
+  "keywords": [
+    "placement",
+    "company",
+    "organization",
+    "organisation",
+    "remote",
+    "virtual",
+    "workplace",
+    "work",
+    "job",
+    "office",
+    "apply",
+    "list",
+    "find",
+    "relevant",
+    "diaspora",
+    "abroad",
+    "nysc",
+    "paid",
+    "stipend"
+  ],
+  "steps": [
+    "Open the SIWES course materials on the LMS and find the recommended companies list.",
+    "Pick about 10 companies that fit your course. Include remote ones and any near you.",
+    "Send each one your SIWES letter by email (or in person if that gets a faster reply).",
+    "Take the first company that accepts you. Ask them for an acceptance letter.",
+    "No reply? Do not wait. Contact other companies on the list or near you."
+  ],
+  "facts": [
+    {
+      "t": "Finding a placement is your responsibility. The list is a set of suggestions, not a guarantee.",
+      "src": "ama",
+      "at": "01:02"
+    },
+    {
+      "t": "You can train remotely, even with a company in another country.",
+      "src": "sheet"
+    },
+    {
+      "t": "The organisation must be reputable and the role must be relevant to your course.",
+      "src": "sheet"
+    },
+    {
+      "t": "You may train where you already work if the role relates to your course and someone other than you supervises you. Think about whether you will really learn something new.",
+      "src": "sheet"
+    },
+    {
+      "t": "Self-employed? You still need an outside organisation to supervise you.",
+      "src": "sheet"
+    },
+    {
+      "t": "Private training academies are allowed (some charge a fee). The goal is that you leave more skilled than you came.",
+      "src": "ama",
+      "at": "01:39"
+    },
+    {
+      "t": "You can change placement. Tell the SIWES coordinator when you do.",
+      "src": "sheet"
+    },
+    {
+      "t": "Staying with the same company for SIWES II means you do not upload a second acceptance letter.",
+      "src": "sheet"
+    },
+    {
+      "t": "If a company extends you from 3 to 6 months, just continue. Do not re-upload. Still book supervision at the end of the first 3 months.",
+      "src": "ama",
+      "at": "01:52"
+    },
+    {
+      "t": "You can do SIWES during NYSC. If you have not started SIWES before 400L you cannot enrol for 400L.",
+      "src": "sheet"
+    },
+    {
+      "t": "Full-time workers can ask their manager for flexible hours or choose a remote company. The requirement cannot be waived.",
+      "src": "sheet"
+    },
+    {
+      "t": "A company that does not accept interns or SIWES, or one that only offers a tiny part-time slot, does not excuse you. Find a flexible or remote company.",
+      "src": "ama",
+      "at": "01:17"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I do SIWES online? Does the school give me a company?",
+      "a": "You can carry out your SIWES remotely/virtually, or in-person at reputable businesses/companies/institutions. The school provides an inexhaustive list of places of attachment to help students secure placements and begin their training on time (this placement list can be accessed in the SIWES course materials in the LMS). It is advised to start the SIWES early in your 200L and before your final year, so as to ease the academic load and enable you graduate on time with your cohort",
+      "src": "sheet"
+    },
+    {
+      "q": "Where is the list of recommended companies?",
+      "a": "You can check out the school's inexhaustive spreadsheet of recommended companies for a SIWES placement in the SIWES course material on the LMS. Reach out to the contacts provided for each company of your choice, and they would get back to you",
+      "src": "sheet"
+    },
+    {
+      "q": "A company on the list is not replying. What do I do?",
+      "a": "In the case of no response from a company in the placement list provided by the school, do not linger for a response or hesitate to reach out to other companies in the placement list or organizations around you",
+      "src": "sheet"
+    },
+    {
+      "q": "I cannot find a company. Can Miva help?",
+      "a": "You can check out the school's inexhaustive spreadsheet of recommended companies for a SIWES placement in the SIWES course material on the LMS. Reach out to the contacts provided for each company of your choice, and they would get back to you",
+      "src": "sheet"
+    },
+    {
+      "q": "Can I do SIWES remotely?",
+      "a": "Yes, you can carry out your SIWES remotely as long as the organization is a reputable and/or recognized one. The school also provides an inexhaustive list of suggested companies to carry out your SIWES which can be accessed in the SIWES course materials in the LMS",
+      "src": "sheet"
+    },
+    {
+      "q": "Are there placements in my state?",
+      "a": "You can try applying to HiiT PLC or any other reputable organization of your choice that offers remote work if securing a placement in your state is unlikely",
+      "src": "sheet"
+    },
+    {
+      "q": "Can I train in something unrelated to my course?",
+      "a": "No, you are expected to carry out your industrial training at a company/role relevant to your course of study",
+      "src": "sheet"
+    },
+    {
+      "q": "What kind of organisation is acceptable?",
+      "a": "Your SIWES should be carried out at a reputable organization",
+      "src": "sheet"
+    },
+    {
+      "q": "I run my own business. Can I train there?",
+      "a": "You are expected to look for an organization to carry out your SIWES so as to be supervised by another party other than yourself regardless of your self-employed status",
+      "src": "sheet"
+    },
+    {
+      "q": "I already work. Can I do SIWES at my workplace?",
+      "a": "Yes, you can complete the SIWES at your workplace provided that you are undergoing the industrial training at a department/role relevant to your course of study, and you are being properly supervised by someone other than yourself. To start, submit your SIWES letter to the department you are applying to, and once you get an acceptance letter to begin your training, upload a copy of it to the LMS and complete the SIWES placement form appropriately with the right details",
+      "src": "sheet"
+    },
+    {
+      "q": "I work full-time abroad. What can I do?",
+      "a": "You can discuss with your manager at work to figure out how you can structure your working hours to look for any remote-based company to carry out your SIWES",
+      "src": "sheet"
+    },
+    {
+      "q": "Must I be at the company every day?",
+      "a": "Yes, it is okay if you go to your SIWES place of attachment two or three times a week provided you are learning and gaining practical skills each day",
+      "src": "sheet"
+    },
+    {
+      "q": "Can I change my SIWES location?",
+      "a": "Yes, you can change SIWES locations. However, you are to reach out to the SIWES coordinator during this process",
+      "src": "sheet"
+    },
+    {
+      "q": "My company kept me for SIWES II. Do I upload another letter?",
+      "a": "No, since you have already submitted the first acceptance letter for SIWES I and have been retained by the same company for your SIWES II, you can continue your training without re-uploading another letter",
+      "src": "sheet"
+    },
+    {
+      "q": "Do I send my SIWES letter by email?",
+      "a": "Ideally yes you can send the SIWES letter via email, however if submitting the letter physically gets you a faster response from the organization, don't hesitate to do so",
+      "src": "sheet"
+    },
+    {
+      "q": "Can I do SIWES during NYSC?",
+      "a": "Yes, you can complete your SIWES while serving for NYSC. If you have already started SIWES I and are expecting to complete SIWES II in your 400L first semsester, you can still enroll for your final year. However, if you are yet to begin the SIWES program before your 400L, you will not be allowed to enroll for your final year",
+      "src": "sheet"
+    },
+    {
+      "q": "I work offshore with irregular time off. What are my options?",
+      "a": "You can defer a semester to take care of your SIWES, then resume your academic semester to take the remaining deferred courses. If you wish to complete both SIWES programs separately, and not at a stretch of six months, you are free to do so, though note that you won't be allowed to enroll for your final year without completing both programs. Finally, you are also free to undergo training remotely in a reputable organization, and with a schedule that is suitable for you as long as it is permitted by your organization of placement",
+      "src": "sheet"
+    }
+  ]
+}

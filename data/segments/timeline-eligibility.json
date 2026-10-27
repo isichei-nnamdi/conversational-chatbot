@@ -1,0 +1,135 @@
+{
+  "id": "timeline-eligibility",
+  "group": "Your situation",
+  "title": "Levels and deadlines",
+  "icon": "calendar",
+  "blurb": "300L, 400L, direct entry, deferring a semester.",
+  "keywords": [
+    "400",
+    "400l",
+    "400 level",
+    "final year",
+    "graduate",
+    "graduation",
+    "direct entry",
+    "de",
+    "300",
+    "defer",
+    "deferment",
+    "enrol",
+    "enroll",
+    "late",
+    "missed",
+    "behind",
+    "carry over"
+  ],
+  "steps": [],
+  "facts": [
+    {
+      "t": "You cannot enrol for 400L until SIWES is complete. The one exception in the written answers: if you have already started and will finish within 400L first semester (for example SIWES I done, SIWES II running), you can still enrol. Confirm your case with the coordinator.",
+      "src": "sheet"
+    },
+    {
+      "t": "If you reach 400L without SIWES, finish it before your final exams, or you will carry the course over into a new semester. That extends your graduation date.",
+      "src": "sheet"
+    },
+    {
+      "t": "Started SIWES in 300L second semester and will finish in 400L first semester as a continuous 6 months? You do not have to defer 400L unless the workload is too much.",
+      "src": "sheet"
+    },
+    {
+      "t": "Direct entry (DE) students joining at 300L do only SIWES II (3 months), before the final year.",
+      "src": "sheet"
+    },
+    {
+      "t": "You can defer a semester to focus only on SIWES. It pushes your graduation date back a semester. Talk to your success advisor.",
+      "src": "sheet"
+    },
+    {
+      "t": "Starting late (for example in 300L second semester)? Start now, and finish SIWES I and II before you enrol for 400L.",
+      "src": "sheet"
+    },
+    {
+      "t": "No deferral is needed just because you are doing SIWES in 300L. You do not have to defer. Defer only if the load is too heavy.",
+      "src": "ama",
+      "at": "01:15"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Must I finish SIWES before 400L?",
+      "a": "You are expected to be done with SIWES before going into your final year, i.e. 400L first semester. You cannot enrol into your final year without completing the SIWES program. As for those who are already in 400L and have not started or are starting their SIWES, try to complete the SIWES program before your final year exams, or else you would have to carry-over the course to the next academic semester, i.e. doing the SIWES as a standalone course in a new semester. Note that the latter results in an extension of your expected graduation date",
+      "src": "sheet"
+    },
+    {
+      "q": "I skipped it in 200L. Can I do it in 400L?",
+      "a": "No, you will not be allowed to enroll for 400 level without completing your SIWES",
+      "src": "sheet"
+    },
+    {
+      "q": "I finished 400L without SIWES. What now?",
+      "a": "You are still expected to complete your SIWES to fulfill all the necessary requirements for graduation. You can re-register the SIWES courses after getting a place of attachment, and complete your training, supervision and defense to be able to graduate",
+      "src": "sheet"
+    },
+    {
+      "q": "I am in 300L second semester and have not started.",
+      "a": "You will have to defer your 400 level until you have completed the SIWES program",
+      "src": "sheet"
+    },
+    {
+      "q": "Do I have to defer 300L second semester or 400L?",
+      "a": "You can complete your 300 level second semester, however, if you are yet to begin your SIWES by then, you will not be allowed to enroll for 400 level. That is, you will be deferring your 400 level first semester until you complete the program",
+      "src": "sheet"
+    },
+    {
+      "q": "I will finish SIWES in 400L first semester. Must I defer?",
+      "a": "If you have started your SIWES in 300L second semester, and plan to complete the six months of industrial training by 400L first semester, i.e. a six months stretch, there is no need for you to defer the 400L first semester unless the workload is too much for you during your final year",
+      "src": "sheet"
+    },
+    {
+      "q": "I am a 300L direct-entry student. Which SIWES do I do?",
+      "a": "As a 300L DE student, you are expected to only carry enroll for SIWES II. You should complete your SIWES program before your final year. You would not be allowed to enroll to your final year until you have done so",
+      "src": "sheet"
+    },
+    {
+      "q": "Can a direct-entry student start SIWES in 300L?",
+      "a": "If you have already started your SIWES as a 300L DE student before going into your final year, you can enroll into your final year, else you would be required to complete the program before proceeding to the next level",
+      "src": "sheet"
+    },
+    {
+      "q": "Can I finish both parts before 300L?",
+      "a": "Yes, you can complete SIWES I & SIWES II before starting your 300L first semester. You can always apply to defer a semester to focus only on SIWES if the workload is too much for you.",
+      "src": "sheet"
+    },
+    {
+      "q": "Can I start during the holiday?",
+      "a": "If you are able to secure a placement for SIWES early in your 200L First semester, please do not hesitate to start your industrial training to enable you complete the program on time. However, if you wish to take the SIWES as a standalone course for an entire semester, you are allowed to do so, but note that this means deferring the semester for other academic studies",
+      "src": "sheet"
+    },
+    {
+      "q": "Can I start SIWES I in 200L first semester?",
+      "a": "Yes, you can as long as you complete both SIWES programs before your final year",
+      "src": "sheet"
+    },
+    {
+      "q": "Can I defer my studies to focus on SIWES?",
+      "a": "It is totally understandable how much the academic load becomes while undergoing your SIWES, therefore, you are able to defer your studies to focus solely on your SIWES, and continue after you are done, however note that course deferments result in extension of your graduation date as it sets you back a semester. Reach out to your success advisor to for more enquiries about course/semester deferments, and how to help you flexibly structure your study to fit your schedule",
+      "src": "sheet"
+    },
+    {
+      "q": "What if my placement is shorter than 3 months?",
+      "a": "The SIWES program runs for six months which is split into three months individually for SIWES I & SIWES II. You are expected to complete both program to be eligible for graduation. Therefore, if you can find another placement to complete the SIWES, please go ahead to do so",
+      "src": "sheet"
+    },
+    {
+      "q": "Can I do the two parts separately?",
+      "a": "Typically, you should complete the SIWES program consectively, i.e six months of industrial training. However, if you only get a three-month internship placement at an organization without being retained for another three months to complete your SIWES II, you can complete your SIWES II whenever you get another placement at an organization. Therefore, you can complete both SIWES programs consecutively or separately depending on your duration of industrial attachment. For the documents needed for submission to the school, you are to get an acceptance letter from the organization of SIWES placement and upload it to the LMS to notify the SIWES coordinator that you have officially begun your SIWES industrial training",
+      "src": "sheet"
+    },
+    {
+      "q": "Can I shorten SIWES II as a final-year student?",
+      "a": "No, you cannot shorten the SIWES II. You can however, complete your SIWES II once you are done with your final exams",
+      "src": "sheet"
+    }
+  ]
+}

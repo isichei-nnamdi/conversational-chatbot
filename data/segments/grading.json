@@ -1,0 +1,79 @@
+{
+  "id": "grading",
+  "group": "Finish up",
+  "title": "Scores",
+  "icon": "chart",
+  "blurb": "How you get graded and fixing missing scores.",
+  "keywords": [
+    "score",
+    "grade",
+    "graded",
+    "zero",
+    "0",
+    "result",
+    "missing",
+    "cgpa",
+    "gpa",
+    "not graded"
+  ],
+  "steps": [
+    "Check you were supervised for SIWES I.",
+    "Check you uploaded your logbook and report and have defended.",
+    "Still no score? Email the SIWES coordinator with your matric number and what you submitted."
+  ],
+  "facts": [
+    {
+      "t": "You are graded once you finish training, are supervised (usually in SIWES I) and defend both SIWES I and II.",
+      "src": "sheet"
+    },
+    {
+      "t": "No supervision for SIWES I means no SIWES I score. You can fix it with a late supervision with your industry supervisor present.",
+      "src": "sheet"
+    },
+    {
+      "t": "A score of zero often means a missing acceptance letter or supervision. Once fixed, the score updates. It may not appear on your side immediately.",
+      "src": "ama",
+      "at": "01:35"
+    },
+    {
+      "t": "Finishing later than your cohort does not lower your result, but your grades may be released later.",
+      "src": "sheet"
+    },
+    {
+      "t": "To do well: keep your logbook daily, get it signed, be supervised, write a good report, defend well.",
+      "src": "sheet"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I know I have been graded?",
+      "a": "You will be graded for SIWES once you have completed your industrial training, have been supervised by your assigned supervisor (typically during your SIWES I), and have finally defended both SIWES I & SIWES II. You can reach out to augustus@miva.university for issues regarding misassignment of supervisors",
+      "src": "sheet"
+    },
+    {
+      "q": "I was supervised but my SIWES I score is zero.",
+      "a": "Note that you will not be scored for SIWES I if you were not supervised for it. However, if you were supervised and still did not get scored, please reach out to the SIWES coordinator (augustus@miva.university) to rectify this",
+      "src": "sheet"
+    },
+    {
+      "q": "I defended but my SIWES I has no grade.",
+      "a": "Please note that SIWES I will be graded if you initially underwent supervision with your assigned supervisor after at least two months into your industrial training for SIWES I. However, if you are done with SIWES II, but still have an assigned supervisor and can get your industry-based supervisor to attest for you on the virtual supervision, you can then to be graded for SIWES I",
+      "src": "sheet"
+    },
+    {
+      "q": "Only SIWES II was graded. Why?",
+      "a": "Please note that your SIWES I will not be graded if you were not supervised by your assigned supervisor during the course of your industrial training",
+      "src": "sheet"
+    },
+    {
+      "q": "What do you expect from us to score well?",
+      "a": "If you do the necessary work required from you during your SIWES program, such as filling your logbook daily with what you achieved or learned for that day at your place of attachment, getting the logbook signed by your industry-based supervisor regularly, being properly supervised, writing a good technical report, and defending your SIWES experience appropriately, you do not need to worry about low scores on your final assessment",
+      "src": "sheet"
+    },
+    {
+      "q": "Will finishing after my final exam affect my result?",
+      "a": "No, it will not affect your result. However, note that it can result to later releases of your SIWES grades",
+      "src": "sheet"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "help",
+  "group": "Your situation",
+  "title": "Special cases and contacts",
+  "icon": "help",
+  "blurb": "Who to contact when things go wrong.",
+  "keywords": [
+    "contact",
+    "email",
+    "ticket",
+    "complain",
+    "escalate",
+    "emergency",
+    "accident",
+    "special",
+    "help",
+    "recording",
+    "success advisor",
+    "coordinator",
+    "international",
+    "italy"
+  ],
+  "steps": [
+    "Try the step-by-step help for your topic first.",
+    "Still stuck? Email the SIWES coordinator from your Miva email: augustus@miva.university.",
+    "Say your name, matric number, SIWES level and what you have already done.",
+    "For tuition, deferment or course load, talk to your success advisor."
+  ],
+  "facts": [
+    {
+      "t": "SIWES coordinator: augustus@miva.university. Use your Miva student email, not a personal one.",
+      "src": "sheet"
+    },
+    {
+      "t": "Unusual cases (an accident, illness, living abroad with work rules) go to the coordinator, who will look at the rules with you.",
+      "src": "ama",
+      "at": "01:13"
+    },
+    {
+      "t": "The AMA recording is posted on the LMS.",
+      "src": "sheet"
+    },
+    {
+      "t": "Do not post your matric number or personal details in this chat.",
+      "src": "policy"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "An emergency stopped my SIWES. What can I do?",
+      "a": "Please reach out to augustus@miva.university for specialized cases (e.g. unprecented accidents, etc) that prevents you from carrying out your SIWES.",
+      "src": "sheet"
+    },
+    {
+      "q": "I want advice on my placement.",
+      "a": "Yes, you can, however please reach out to the SIWES coordinator via email (augustus@miva.university) to inform him so as to guide you during the entire process",
+      "src": "sheet"
+    },
+    {
+      "q": "I am unhappy with my current organisation.",
+      "a": "Please note that since you have not yet been supervised for your previous SIWES and have not completed your SIWES defense, you do not have a score for the exercise at this time. Therefore, if you feel that you have not gained the skills and experience you expected from your current organisation, you may proceed to apply to another organisation for your SIWES. However, I would like to remind you that you are required to complete both SIWES I and SIWES II before you can register for your courses in 400L. If starting your SIWES afresh with another organisation may delay your progression to 400L, I encourage you to carefully consider your options before making a decision. I hope this clarifies your query.",
+      "src": "sheet"
+    },
+    {
+      "q": "Where is the AMA recording?",
+      "a": "The SIWES AMA session recording will be made available on the LMS once the session concludes",
+      "src": "sheet"
+    },
+    {
+      "q": "There is an error in my SIWES record.",
+      "a": "Please reach out to the SIWES coordinator (augustus@miva.university) to rectify this",
+      "src": "sheet"
+    }
+  ]
+}

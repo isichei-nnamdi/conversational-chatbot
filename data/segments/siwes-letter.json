@@ -1,0 +1,47 @@
+{
+  "id": "siwes-letter",
+  "group": "Before you start",
+  "title": "SIWES letter",
+  "icon": "mail",
+  "blurb": "Generate the letter you send to companies.",
+  "keywords": [
+    "siwes letter",
+    "request letter",
+    "application letter",
+    "generate",
+    "download letter",
+    "error code"
+  ],
+  "steps": [
+    "Open the LMS on a laptop (phones can fail).",
+    "Open the menu or profile dropdown and click Request SIWES Letter.",
+    "Enter your student email so your details fill in.",
+    "Choose SIWES I, SIWES II, or both.",
+    "Choose the duration (3 or 6 months).",
+    "Enter the company name and address, then submit.",
+    "Download or print the letter and send it to the company."
+  ],
+  "facts": [
+    {
+      "t": "If you get an error code, switch to a laptop, then try again. If it still fails, ask your course rep or success advisor for a copy.",
+      "src": "sheet"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I generate my SIWES letter?",
+      "a": "You can generate the SIWES Letter from the LMS by navigating under the menu/profile dropdown and clicking 'Request SIWES Letter'. Then input your student email to auto-populate your details, select the SIWES category (i.e. SIWES I, SIWES II, or both) you are generating the letter for. Select the duration (e.g. 3 months or 6 months) of the industrial placement, and fill in the appropriate company details (e.g. company name and address) before clicking submit to geerate the letter. Then print or download the letter into your device",
+      "src": "sheet"
+    },
+    {
+      "q": "I cannot download my SIWES letter.",
+      "a": "Pleae use a laptop to generate and download your SIWES Letter.",
+      "src": "sheet"
+    },
+    {
+      "q": "The SIWES form shows an error code.",
+      "a": "Click 'Back to home' to be redirected to the appropriate webpage, or you can reach out to your department course representative or ask your success advisor to help you out with a copy of the ITF Form",
+      "src": "sheet"
+    }
+  ]
+}

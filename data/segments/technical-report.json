@@ -1,0 +1,54 @@
+{
+  "id": "technical-report",
+  "group": "Finish up",
+  "title": "Technical report",
+  "icon": "file",
+  "blurb": "One report for the whole programme.",
+  "keywords": [
+    "report",
+    "technical report",
+    "guidelines",
+    "format",
+    "slides",
+    "two organizations",
+    "two companies",
+    "submit report"
+  ],
+  "steps": [
+    "Open the technical report writing guidelines in the SIWES course materials.",
+    "Write one report that covers your whole SIWES experience.",
+    "Upload it with your signed logbook after SIWES II.",
+    "Prepare slides for your defence with the key points."
+  ],
+  "facts": [
+    {
+      "t": "You submit the report once, at the end of SIWES II. No separate 3-month report.",
+      "src": "sheet"
+    },
+    {
+      "t": "Trained at two organisations? One combined report is enough, and the slides should cover both.",
+      "src": "sheet"
+    },
+    {
+      "t": "Your grade depends on the report following the guidelines.",
+      "src": "sheet"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do I submit a report for each 3 months?",
+      "a": "You are expected to only submit your technical report at the end of your SIWES II along with your filled logbook",
+      "src": "sheet"
+    },
+    {
+      "q": "I trained at two organisations. Do I write two reports?",
+      "a": "Since you would be defending both SIWES programs together, making a single report including both experiences should suffice. This also applies for the presentation slides, they should include key information about both trainings",
+      "src": "sheet"
+    },
+    {
+      "q": "I finished SIWES. What do I submit?",
+      "a": "If you have completed your SIWES I & II, and have undergone supervision, you are expected to submit your duly signed and filled logbook, and a technical report covering your experience through the LMS. After which you are supposed to reach out to your course coordinator for your defense",
+      "src": "sheet"
+    }
+  ]
+}

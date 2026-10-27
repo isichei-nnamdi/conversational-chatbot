@@ -1,0 +1,98 @@
+{
+  "id": "acceptance-letter",
+  "group": "Before you start",
+  "title": "Acceptance letter",
+  "icon": "upload",
+  "blurb": "Upload it so a supervisor is assigned.",
+  "keywords": [
+    "acceptance",
+    "upload",
+    "placement form",
+    "enrolled",
+    "enrol",
+    "not enrolled",
+    "submitted",
+    "letter",
+    "assigned",
+    "pdf"
+  ],
+  "steps": [
+    "On the LMS home screen open the menu next to your profile photo.",
+    "Click Upload Acceptance Letter.",
+    "Use your Miva student email on the form.",
+    "Fill in every field. Check twice: you cannot edit after you submit.",
+    "Upload the letter as a PDF and submit.",
+    "Make sure you see a confirmation. If not, submit again."
+  ],
+  "facts": [
+    {
+      "t": "Doing 6 months at one company? Tick both SIWES I and SIWES II on the form. If you only ticked one, it will be fixed. Carry on.",
+      "src": "sheet"
+    },
+    {
+      "t": "Submitted a wrong detail? Email the SIWES coordinator for a correction.",
+      "src": "sheet"
+    },
+    {
+      "t": "A mail saying you did not enrol for SIWES, when you are enrolled on the LMS, can be ignored. Check with the supervisor named in the mail.",
+      "src": "ama",
+      "at": "01:15"
+    },
+    {
+      "t": "Started training without uploading? Upload it now and contact your supervisor. Supervisors were only assigned after a letter was submitted.",
+      "src": "ama",
+      "at": "01:33"
+    },
+    {
+      "t": "If you did SIWES but submitted nothing on the LMS, you may need to start the process again. Email the SIWES coordinator.",
+      "src": "sheet"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I submit my acceptance letter?",
+      "a": "You can submit your acceptance letter through the LMS, by navigating through the menu (click on the hamburger bar icon at the top of the LMS webpage), and select the 'Upload Acceptance Letter'. Then you are expected to fill the SIWES placement form with your appropriate details, and finally upload a copy of the acceptance letter (in PDF format)",
+      "src": "sheet"
+    },
+    {
+      "q": "I cannot find where to upload my acceptance letter.",
+      "a": "On the home screen of the LMS, navigate and click the menu dropdown beside your profile photo, then you will select 'Upload Acceptance Letter' from the drop down list to upload your acceptance letter and fill the SIWES placement form",
+      "src": "sheet"
+    },
+    {
+      "q": "Which letter do I upload?",
+      "a": "You are expected to upload a letter of acceptance from your organization of attachment on the LMS",
+      "src": "sheet"
+    },
+    {
+      "q": "I started training before I got my letter. Is that okay?",
+      "a": "Yes, go ahead and upload the acceptance letter on the LMS and reach out to your assigned supervisor for your vitual supervision",
+      "src": "sheet"
+    },
+    {
+      "q": "I did SIWES but never uploaded anything on the LMS.",
+      "a": "You will have to start the SIWES program all over again after you have submitted your acceptance letter on the LMS. You are expected to submit your acceptance letter at the begining of your SIWES to be assigned a supervisor, as well as inform the SIWES coordinator that you have commenced your industrial training. However, if you did not do this, and you have completed the SIWES program and are in contact without your industry-based supervisor, please reach out to the SIWES coordinator (augustus@miva.university)",
+      "src": "sheet"
+    },
+    {
+      "q": "I made a mistake in my submission.",
+      "a": "When you are uploading the necessary documents for your SIWES, please ensure that all details are correct before submitting as you would not have a chance to edit them personally once submitted. However, in the case of an error during/after submission, you can reach out to augustus@miva.university for corrections.",
+      "src": "sheet"
+    },
+    {
+      "q": "I got an email saying I did not enrol, but I did.",
+      "a": "Please ignore the mail as you have already confirmed your enrollment on the LMS. Reach out to the tagged email to confirm if they were assigned to you",
+      "src": "sheet"
+    },
+    {
+      "q": "I chose only SIWES II on the form but I am doing 6 months.",
+      "a": "If you're doing a 6-month SIWES, you're required to select both SIWES I & II when filling out your form. The question is a check box that will allow you to choose multiple options, however, if you've chosen only SIWES II, please don't worry about it, it will be rectified, just go ahead with your SIWES exercise.",
+      "src": "sheet"
+    },
+    {
+      "q": "My company extended me. Do I submit the letter again?",
+      "a": "No, if you have already submitted the first acceptance letter for SIWES I and have been retained by the same company for your SIWES II, you can continue your training without re-uploading another letter",
+      "src": "sheet"
+    }
+  ]
+}

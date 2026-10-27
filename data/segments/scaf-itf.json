@@ -1,0 +1,91 @@
+{
+  "id": "scaf-itf",
+  "group": "Before you start",
+  "title": "SCAF form and ITF",
+  "icon": "stamp",
+  "blurb": "Fill it, stamp it, submit it to ITF.",
+  "keywords": [
+    "scaf",
+    "scarf",
+    "itf",
+    "stamp",
+    "sort code",
+    "bank",
+    "endorse",
+    "signature",
+    "form 8"
+  ],
+  "steps": [
+    "Download the SCAF form from the SIWES course materials on the LMS.",
+    "Fill it in. Put your start and end dates (for 6 months, write the full range).",
+    "Send it to the company to stamp and sign. Digital stamps work for remote firms.",
+    "Print the endorsed form.",
+    "Submit it to the ITF office nearest you, ideally before or at the start of training."
+  ],
+  "facts": [
+    {
+      "t": "The ITF office does not supervise you or ask for your logbook. Miva supervises and grades you.",
+      "src": "ama",
+      "at": "01:22"
+    },
+    {
+      "t": "Remote training does not stop you from submitting. ITF offices should accept it.",
+      "src": "ama",
+      "at": "01:08"
+    },
+    {
+      "t": "No ITF office near you? Search online for the closest branch, or use another branch.",
+      "src": "ama",
+      "at": "01:02"
+    },
+    {
+      "t": "Students outside Nigeria do not submit SCAF. The school handles ITF for them.",
+      "src": "sheet"
+    },
+    {
+      "t": "Not strictly compulsory, but the SCAF form is what lets the ITF process your payment.",
+      "src": "sheet"
+    },
+    {
+      "t": "Bank sort codes come from your bank.",
+      "src": "sheet"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is the ITF/SCAF form compulsory?",
+      "a": "It is not necessarily compulsory as the SCAF Form is needed to process the payments from ITF to you. However if you choose to submit it, you are expected to submit the SCAF Form to the nearest ITF office after securing a placement at the beginning of your industrial training. If your training is expected to run for six months at a stretch, you can specify so on the SCAF Form by specifying the start and end date of your industrial experience",
+      "src": "sheet"
+    },
+    {
+      "q": "How do I submit my SCAF form when I work remotely?",
+      "a": "You are expected to submit your SCAF Form after endorsing it with the accepting company's stamp and signature to the nearest ITF office in your area. You can download a soft copy of the SCAF Form from the SIWES course materials in the LMS, fill and endorse it virtually and print a physical copy for submission to the ITF office",
+      "src": "sheet"
+    },
+    {
+      "q": "I am doing 6 months at once. How do I submit the SCAF form?",
+      "a": "You are expected to submit your SCAF Form after endorsing it with the accepting company's stamp and signature to the nearest ITF office in your area. You can download a soft copy of the SCAF Form from the SIWES course materials in the LMS, fill and endorse it virtually and print a physical copy for submission to the ITF office",
+      "src": "sheet"
+    },
+    {
+      "q": "How will a remote company stamp the SCAF form?",
+      "a": "You can send the SCAF Form digitally for signature and stamp endorsement to remote firms, and then print the endorsed copy for physical submission",
+      "src": "sheet"
+    },
+    {
+      "q": "The nearest ITF office is inconvenient.",
+      "a": "Look for another branch to submit your SCAF Form if it is incovenient to submit to the one closest to you",
+      "src": "sheet"
+    },
+    {
+      "q": "I live abroad. How do I handle ITF?",
+      "a": "The school handles the necessary ITF submissions for the diasporan students",
+      "src": "sheet"
+    },
+    {
+      "q": "Where do I get bank sort codes?",
+      "a": "Once you have undergone at least two months of industrial training, kindly reach out to your assigned supervisor to let them know that you are ready for supervision to book a virtual supervision session with them online. Please note that your industry-based supervisor should be present on the virtual call. About where to get bank sort codes, you can inquire about your bank's sort codes directly from your bank",
+      "src": "sheet"
+    }
+  ]
+}

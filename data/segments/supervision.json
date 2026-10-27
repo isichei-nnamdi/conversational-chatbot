@@ -1,0 +1,132 @@
+{
+  "id": "supervision",
+  "group": "While you train",
+  "title": "Virtual supervision",
+  "icon": "video",
+  "blurb": "The call that earns your SIWES I score.",
+  "keywords": [
+    "supervision",
+    "supervised",
+    "call",
+    "virtual",
+    "book session",
+    "industry supervisor",
+    "meeting",
+    "attest",
+    "two months",
+    "monitoring",
+    "deadline",
+    "score zero"
+  ],
+  "steps": [
+    "Train for at least 2 months.",
+    "Email your school supervisor from your Miva email and ask for a time.",
+    "Tell your industry supervisor the date. They must join the call.",
+    "Have your filled, signed logbook ready to show.",
+    "Join the call. Answer questions about what you did.",
+    "Afterwards, continue SIWES II and upload your logbook and report at the end."
+  ],
+  "facts": [
+    {
+      "t": "No supervision means no SIWES I score, even if you finished all 6 months and defended.",
+      "src": "sheet"
+    },
+    {
+      "t": "Your industry supervisor must be on the call. They confirm you did the work.",
+      "src": "sheet"
+    },
+    {
+      "t": "Supervision is for SIWES I. There is no separate supervision for SIWES II; you defend right after.",
+      "src": "sheet"
+    },
+    {
+      "t": "There is no fixed deadline, but finish and defend before 400L first semester.",
+      "src": "sheet"
+    },
+    {
+      "t": "You do not need to send updates beforehand. Updates are given on the call.",
+      "src": "sheet"
+    },
+    {
+      "t": "Remote or on-site, the link is the same: your supervisor sends a link and both of you join.",
+      "src": "ama",
+      "at": "01:50"
+    },
+    {
+      "t": "Missed supervision? Email your supervisor now and bring your industry supervisor to the call. Without them you can get a very low score.",
+      "src": "ama",
+      "at": "01:27"
+    },
+    {
+      "t": "A scored SIWES I can still be earned late if you get a supervisor and your industry supervisor attends.",
+      "src": "sheet"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "When do I contact my supervisor for supervision?",
+      "a": "You are expected to reach out to your assigned supervisor for supervision after you must have undergone at least two months of industrial training for SIWES I at your place of attachment. Note that there is no supervision for SIWES II as you are expected to carry out your defence immediately after completing the SIWES II",
+      "src": "sheet"
+    },
+    {
+      "q": "What if I skip supervision?",
+      "a": "Please reach out to your SIWES supervisor once you have undergone at least two months of industrial-training at your place of attachment for your virtual supervision. Note that your industry-based supervisor is expected to be on the supervision call to attest for you. No supervision results in no score for your SIWES I even if you completed the SIWES program, i.e. the entire six months at a stretch and have defended the course",
+      "src": "sheet"
+    },
+    {
+      "q": "How do I get supervised?",
+      "a": "You are supposed to contact your school-assigned supervisor once you feel you are ready for supervision (typically after two months into your industrial-training) via your school email. However, you are also expected to reach out to your industry-based supervisor to notify them to be present on the virtual supervision call to attest for you",
+      "src": "sheet"
+    },
+    {
+      "q": "How do I get supervised if my organisation is remote?",
+      "a": "You are to get in touch with both your school assigned supervisor and industry-based supervisor to book a session for a virtual supervision that aligns with everyone's availability",
+      "src": "sheet"
+    },
+    {
+      "q": "My company supervisor wants a different time for the call.",
+      "a": "Check in with your supervisor to agree on a time slot for a virtual supervision that aligns with your industry-based supervisor's availability",
+      "src": "sheet"
+    },
+    {
+      "q": "How many times will I be supervised?",
+      "a": "You are expected to reach out to your supervisor to book a session for your virtual supervision when you have undergone at least two months of training, where you are expected to present the filled and signed logbook. You are also advised to invite your industry-based supervisor as well on the supervision call to attest for your work",
+      "src": "sheet"
+    },
+    {
+      "q": "Is there a deadline for supervision?",
+      "a": "You are typically expected to contact your supervisor after two months of training at your place of attachment for your supervision, however while there is no deadline for supervision, you are expected to finish and defend your SIWES before your final year, i.e, 400L first semester",
+      "src": "sheet"
+    },
+    {
+      "q": "Do I send my supervisor updates during SIWES?",
+      "a": "Yes, you can submit your completed and duly signed SCAF Form to the nearest ITF office to you. Then you are expected to reach out to your supervisor at least two months into your industrial training to book a session your virtual supervision. There is no need for you to send updates of your SIWES to your supervisor as all updates will be given to them on the supervision call. Finally, you can download the softcopy logbook from the SIWES course materials on the LMS. It is advised to fill out your logbook virtually using any word/pdf editor as it would be easier for you when it is time to upload the filled logbook on the LMS.",
+      "src": "sheet"
+    },
+    {
+      "q": "What is SIWES monitoring?",
+      "a": "You will be assigned a supervisor after submitting your acceptance letter on the LMS, whom you will reach out to once you have completed at least two months of industrial training to book a session for a virtual supervision as part of the SIWES monitoring",
+      "src": "sheet"
+    },
+    {
+      "q": "I was graded for SIWES II but not SIWES I.",
+      "a": "This issue can arise if you were not supervised initiallyfor your SIWES I, therefore you are expected to reach out to your supervisor for supervision. However, note that your industry-based supervisor for your SIWES I should be present on the supervision call to attest for you",
+      "src": "sheet"
+    },
+    {
+      "q": "I finished SIWES without supervision. Can I still be scored?",
+      "a": "No, you cannot.Though, if you are able to reach out to your industry-based supervisor for SIWES I to be on a virtual supervision call with you alongside your school-assigned supervisor, you can still salvage the situation and be scored for supervision",
+      "src": "sheet"
+    },
+    {
+      "q": "I completed SIWES I but was not supervised. What now?",
+      "a": "Reach out to your school assigned supervisor to book a session for your virtual supervision. Note that your industry-based supervisor's presence is expected on the virtual supervision call",
+      "src": "sheet"
+    },
+    {
+      "q": "I defended before I was supervised.",
+      "a": "Reach out to your assigned supervisor via email to inquire from them the best time to begin your supervision. However, please note that you are expected to finish your SIWES supervision first before going for your SIWES defence. And in the case in which you completed the latter before being supervised, please reach out to your assigned supervisor immediately to be supervised as no supervision results in no score for your SIWES I",
+      "src": "sheet"
+    }
+  ]
+}

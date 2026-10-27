@@ -1,0 +1,75 @@
+{
+  "id": "getting-started",
+  "group": "Start here",
+  "title": "The whole process",
+  "icon": "route",
+  "blurb": "Every step, in order, from enrolment to defence.",
+  "keywords": [
+    "how do i",
+    "steps",
+    "process",
+    "start",
+    "begin",
+    "next step",
+    "what next",
+    "documents",
+    "overview",
+    "order"
+  ],
+  "steps": [
+    "Register for the SIWES course on the LMS (200L first semester) and read the course materials.",
+    "Generate your SIWES letter: menu > Request SIWES Letter. Use it to apply to companies.",
+    "Get an acceptance letter from the company you will train with.",
+    "Upload the acceptance letter: menu > Upload Acceptance Letter, then fill the placement form.",
+    "Download the SCAF form, fill it, get it stamped and signed by the company, and take it to the nearest ITF office.",
+    "Check your Miva email. A school supervisor is assigned and writes to you.",
+    "Train, and fill your logbook as you go.",
+    "After at least 2 months, book your virtual supervision. Your company supervisor must join the call.",
+    "When you finish SIWES II, upload your signed logbook and technical report on the LMS.",
+    "Email your program coordinator to schedule your defence."
+  ],
+  "facts": [
+    {
+      "t": "Form 8 is now digital. You fill it during supervision. The only form you chase yourself is the SCAF form.",
+      "src": "ama",
+      "at": "01:25"
+    },
+    {
+      "t": "Do the steps at the right time. Students who skipped the acceptance letter or supervision had to redo or got a low score.",
+      "src": "ama",
+      "at": "01:10"
+    },
+    {
+      "t": "Use your Miva student email for everything. Do not use a personal email unless you are told to.",
+      "src": "ama",
+      "at": "01:18"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I go about my SIWES?",
+      "a": "You start your SIWES by first registering for the course in your 200L first semester. Then you are to go through the course materials to familiarize yourself with the entire process. During which you are expected to start looking and applying to organizations for placement using your SIWES letter (which can be generated under 'Request SIWES Letter' on the LMS). Once you have secured a placement, you are expected to upload an acceptance letter (given to you by the organization you'll be conducting your SIWES at) on the LMS and fill out the SIWES placement form appropriately with your details. Subsequently, you are also expected to download the SCAF Form from the SIWES course materials, fill it, and get it endorsed by your organization of attachment with their signature and stamp, before submitting it to the nearest ITF office to you (Note that this step is excluded for diasporan learners as the school will handle the submission for you). Once you have successfully uploaded your acceptance letter, a supervisor will then be assigned to you, whom you will reach out to for supervision when you have undergone at least two months of industrial training for your supervision alongside your industry-based supervisor. Finally, you are expected to submit your technical report and filled logbook on the LMS once you have completed SIWES I & SIWES II, then reach out to your program coordinator to defend the course",
+      "src": "sheet"
+    },
+    {
+      "q": "A company accepted me. What is the next step?",
+      "a": "After securing a placement for your SIWES, you are expected to upload your acceptance letter through the LMS. Upon successful upload, a supervisor will be assigned to you. Your supervisor would reach out to you once they've been assigned. You can reach out to your supervisor for supervision after you must have undergone at least two months of industrial training at your place of attachment",
+      "src": "sheet"
+    },
+    {
+      "q": "I submitted my acceptance letter. What next?",
+      "a": "Continue with your industrial training, then reach out to your supervisor once you have undergone at least two months of training for your virtual supervision",
+      "src": "sheet"
+    },
+    {
+      "q": "Which documents do I need to submit?",
+      "a": "Firstly, you are expected to upload an acceptance letter from your organization of attachment to the LMS, and fill the subsequent placement form approriately. Then you are advised to download the SCAF Form from the SIWES course materials on the LMS to print, fill out, and get endorsed by your industry of attachment before submitting to the ITF office. Finally, when you have concluded your SIWES II, you are expected to submit/upload your filled logbook alongside your technical report on the LMS",
+      "src": "sheet"
+    },
+    {
+      "q": "Which forms do I fill?",
+      "a": "You are expected to fill the SIWES placement form upon uploading your acceptance letter on the LMS. You are also expected to fill the SCAF Form and get it endorsed by your organization of attachment before submitting to the nearest ITF office to you. Note that the submission of SCAF Form is excluded for diasporan students.",
+      "src": "sheet"
+    }
+  ]
+}
