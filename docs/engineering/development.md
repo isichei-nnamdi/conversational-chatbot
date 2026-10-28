@@ -26,6 +26,8 @@ npm test                             # what the pre-commit hook runs
 git config core.hooksPath .githooks
 ```
 
+**Skipping reCAPTCHA and rate limits locally.** Set `DISABLE_GATES=1` in `server/.env`. It only takes effect when `NODE_ENV` is not `production` and the request really arrives over loopback (127.0.0.1 or ::1; forwarded headers are ignored). The server then binds to 127.0.0.1 only, hides the reCAPTCHA site key from the page, and prints a warning at start. The Docker image sets `NODE_ENV=production`, so the Space ignores the flag. Never add it to Space secrets.
+
 With no `GROQ_API_KEY` the server still works: it answers straight from the knowledge base and says so.
 
 To preview the production build against the local server, build with an empty API base: `VITE_API_BASE= npm run build -w web`, then `npm start -w server` (it serves `web/dist` when present).

@@ -16,3 +16,4 @@
 | T11 | reCAPTCHA token replay or skipped client check | Server verifies every request with Google and checks action and score; the client check is only a convenience |
 | T12 | Shared IP (campus NAT) locks out honest students | Limits are per minute, not per day; document answers are served by `/api/lookup` with a higher limit; tune after launch |
 | T9 | PII slipped into KB or repo | Sanitiser in `build_kb.py`; KB integrity test blocks other emails and matric patterns; raw exports stay outside the repo |
+| T13 | Local-testing switch (`DISABLE_GATES=1`) left on, or reachable by others | Ignored when `NODE_ENV=production` (the image sets it); honoured only for loopback sockets; binds to 127.0.0.1; startup warning; tests cover production and non-loopback; never in Space secrets or CI |

@@ -4,13 +4,14 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { answer } from "./answer.js";
 import { COORDINATOR_EMAIL, KB_VERSION, LOOKUP_RATE_LIMIT, MAX_MESSAGE_CHARS, RATE_LIMIT } from "./constants.js";
+import { gatesRequested, skipGates } from "./localtest.js";
 import { lookup } from "./lookup.js";
 import { verifyRecaptcha } from "./recaptcha.js";
 import { buildIndex } from "./retrieve.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 
-export function createApp({ kb, llm, apiKey, verify = verifyRecaptcha, log = console.log, allowedOrigin = process.env.ALLOWED_ORIGIN } = {}) {
+export function createApp({ kb, llm, apiKey, verify = verifyRecaptcha, log = console.log, allowedOrigin = process.env.ALLOWED_ORIGIN, env = process.env } = {}) {
   const index = buildIndex(kb);
   const allowed = String(allowedOrigin || "").split(",").map((o) => o.trim()).filter(Boolean);
   const app = express();
@@ -42,6 +43,7 @@ export function createApp({ kb, llm, apiKey, verify = verifyRecaptcha, log = con
   const makeLimiter = ({ windowMs, max }) => {
     const hits = new Map();
     return (req, res, next) => {
+      if (skipGates(req, env)) return next();
       const now = Date.now();
       const rec = hits.get(req.ip);
       if (!rec || now - rec.start > windowMs) hits.set(req.ip, { start: now, n: 1 });
@@ -73,7 +75,7 @@ export function createApp({ kb, llm, apiKey, verify = verifyRecaptcha, log = con
       groups,
       coordinatorEmail: COORDINATOR_EMAIL,
       maxChars: MAX_MESSAGE_CHARS,
-      recaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY || null,
+      recaptchaSiteKey: gatesRequested(env) ? null : env.RECAPTCHA_SITE_KEY || null,
       segments: segments.map(({ id, group, title, icon, blurb, steps }) => ({ id, group, title, icon, blurb, steps })),
     });
   });
@@ -85,7 +87,7 @@ export function createApp({ kb, llm, apiKey, verify = verifyRecaptcha, log = con
 
   // Step 2 (when the document did not help): the chatbot. Rate limited and reCAPTCHA gated.
   app.post("/api/chat", chatLimiter, validate, async (req, res) => {
-    const check = await verify(req.body.captchaToken, req.ip);
+    const check = skipGates(req, env) ? { ok: true, reason: "local-testing" } : await verify(req.body.captchaToken, req.ip);
     if (!check.ok) {
       return res.status(403).json({ error: "We could not confirm you are a person. Please try again.", reason: check.reason });
     }
