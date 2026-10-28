@@ -10,11 +10,17 @@ const QUICK = [
   { icon: "calendar", verb: "How long is SIWES?", q: "How long is SIWES?" },
 ];
 
-const STEPS = [
-  { t: "Read the written answer", d: "Straight from the SIWES coordinator's notes." },
-  { t: "Not enough? Ask the helper", d: "Short steps, in plain words." },
-  { t: "Still stuck? Email the coordinator", d: "We point you to the right person." },
+const HOW = [
+  { icon: "search", t: "Pick a question", d: "Or choose a topic." },
+  { icon: "file", t: "Read the answer", d: "Short steps, in plain words." },
+  { icon: "chat", t: "Still stuck? Ask the helper", d: "It only opens if the answer didn't help." },
 ];
+
+// Where the click happened, so the reader can unfurl out of it.
+const originOf = (e) => {
+  const r = e.currentTarget.getBoundingClientRect();
+  return `${Math.round(r.left + r.width / 2)}px ${Math.round(r.top + r.height / 2)}px`;
+};
 
 const store = {
   get(k) {
@@ -33,6 +39,16 @@ const store = {
   },
 };
 
+// The school's logo lives at web/public/miva-logo.png. Until that file exists the "S" mark shows instead.
+function Logo() {
+  const [ok, setOk] = useState(true);
+  return ok ? (
+    <img className="logo" src="/miva-logo.png" alt="Miva Open University" onError={() => setOk(false)} />
+  ) : (
+    <span className="mark" aria-hidden="true">S</span>
+  );
+}
+
 let nextId = 1;
 const id = () => nextId++;
 
@@ -43,9 +59,10 @@ export default function App() {
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(null); // null | "Looking for a written answer…" | "Asking the helper…"
   const [chatOpen, setChatOpen] = useState(false);
+  const [reader, setReader] = useState(null); // { kind: "loading" | "error" | "doc" | "topic", ... }
+  const [rail, setRail] = useState(() => store.get("siwes.rail") === "1");
   const [privacy, setPrivacy] = useState(false);
   const [consent, setConsent] = useState(() => store.get("siwes.consent"));
-  const [theme, setTheme] = useState(() => store.get("siwes.theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
   const endRef = useRef(null);
 
   const loadKb = useCallback(() => {
@@ -55,20 +72,21 @@ export default function App() {
   useEffect(loadKb, [loadKb]);
 
   useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-    store.set("siwes.theme", theme);
-  }, [theme]);
-
-  useEffect(() => {
     if (!messages.length) return;
     endRef.current?.scrollIntoView({ block: "end", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
   }, [messages, busy, chatOpen]);
+
+  function toggleRail() {
+    setRail((r) => {
+      store.set("siwes.rail", r ? "0" : "1");
+      return !r;
+    });
+  }
 
   const maxChars = kb?.maxChars ?? 500;
   const email = kb?.coordinatorEmail ?? "the SIWES coordinator";
 
   const add = (m) => setMessages((ms) => [...ms, { id: id(), ...m }]);
-  const patch = (mid, p) => setMessages((ms) => ms.map((m) => (m.id === mid ? { ...m, ...p } : m)));
 
   const history = useCallback(
     (upto) =>
@@ -100,35 +118,47 @@ export default function App() {
     }
   }
 
-  async function send(raw) {
-    const q = raw.trim();
-    if (!q || busy) return;
+  async function ask(q) {
     setChatOpen(true);
-    setText("");
     const mid = id();
     setMessages((ms) => [...ms, { id: mid, role: "user", text: q }]);
-    setBusy("Looking for a written answer…");
+    await askBot(q, mid + 1);
+  }
+
+  // A written answer is shown in the reader. The helper is only reached when there is none, or the student says it didn't help.
+  async function find(raw, from = "page", origin) {
+    const q = raw.trim();
+    if (!q || busy) return;
+    setText("");
+    if (from === "page") setReader({ kind: "loading", question: q, origin });
+    else setBusy("Looking for a written answer…");
     let doc = null;
     try {
       doc = (await lookup(q)).doc;
     } catch (e) {
       setBusy(null);
-      add({ role: "error", text: e.message, retry: q });
+      if (from === "page") setReader({ kind: "error", question: q, text: e.message, origin });
+      else add({ role: "error", text: e.message, retry: q });
       return;
     }
     setBusy(null);
-    if (doc) add({ role: "doc", doc, question: q, verdict: null });
-    else await askBot(q, mid + 1);
+    if (doc) {
+      setChatOpen(false);
+      setReader({ kind: "doc", doc, question: q, verdict: null, origin });
+    } else {
+      setReader(null);
+      await ask(q);
+    }
   }
 
-  function verdict(m, helpful) {
-    patch(m.id, { verdict: helpful ? "yes" : "no" });
-    if (!helpful) askBot(m.question, m.id);
-  }
-
-  function openTopic(seg) {
-    add({ role: "topic", seg });
-    setChatOpen(true);
+  function verdict(helpful) {
+    if (helpful) {
+      setReader((r) => ({ ...r, verdict: "yes" }));
+    } else {
+      const q = reader.question;
+      setReader(null);
+      ask(q);
+    }
   }
 
   function choose(v) {
@@ -150,39 +180,49 @@ export default function App() {
   );
 
   return (
-    <div className="shell">
+    <div className={`shell${rail ? " rail" : ""}`}>
       <a className="skip" href="#main">Skip to the content</a>
 
       <header className="top">
         <div className="brand">
-          <span className="mark" aria-hidden="true">S</span>
-          <div>
-            <strong>SIWES Guide</strong>
-            <small>Miva Open University</small>
-          </div>
+          <Logo />
+          <strong>SIWES Guide</strong>
         </div>
         <div className="top-actions">
           <button type="button" className="btn ghost" onClick={() => setPrivacy(true)}>Privacy</button>
-          <button type="button" className="btn ghost" onClick={() => setTheme(theme === "dark" ? "light" : "dark")} aria-pressed={theme === "dark"}>
-            <Icon name={theme === "dark" ? "sun" : "moon"} /> {theme === "dark" ? "Light" : "Dark"}
-          </button>
         </div>
       </header>
 
       <aside className="side">
-        <nav aria-label="Topics">
+        <button
+          type="button"
+          className="rail-toggle"
+          onClick={toggleRail}
+          aria-expanded={!rail}
+          aria-controls="topics-nav"
+          aria-label={rail ? "Show topic names" : "Hide topic names"}
+          title={rail ? "Show topic names" : "Hide topic names"}
+        >
+          <Icon name="panel" />
+          <span className="lbl">Topics</span>
+        </button>
+        <nav id="topics-nav" aria-label="Topics">
           {topicState}
           {groups.map(({ g, items }) => (
             <div key={g} className="navgroup">
-              <h2>
-                {g} <span className="count">{items.length}</span>
-              </h2>
+              <h2>{g}</h2>
               <ul>
                 {items.map((s) => (
                   <li key={s.id}>
-                    <button type="button" className="navitem" onClick={() => openTopic(s)}>
+                    <button
+                      type="button"
+                      className="navitem"
+                      onClick={(e) => setReader({ kind: "topic", seg: s, origin: originOf(e) })}
+                      title={s.title}
+                      aria-label={s.title}
+                    >
                       <Icon name={s.icon} />
-                      <span>{s.title}</span>
+                      <span className="lbl">{s.title}</span>
                     </button>
                   </li>
                 ))}
@@ -190,42 +230,30 @@ export default function App() {
             </div>
           ))}
         </nav>
-        <a className="side-foot" href={`mailto:${email}`}>
-          <Icon name="mail" /> Email the coordinator
-        </a>
       </aside>
 
       <main className="page" id="main">
         <div className="page-inner">
           <div className="page-head">
-            <div>
-              <h1>What do you need help with?</h1>
-              <p>Find the written answer first. Ask the helper if it isn't there.</p>
-            </div>
-            <button type="button" className="btn primary" onClick={() => setChatOpen(true)}>
-              <Icon name="chat" /> Ask a question
-            </button>
+            <h1>What do you need help with?</h1>
+            <p>Pick a question, or choose a topic.</p>
           </div>
 
-          <section aria-labelledby="start-h">
-            <h2 id="start-h" className="section-h">Start with a common question</h2>
-            <ul className="tiles">
-              {QUICK.map((t) => (
-                <li key={t.q}>
-                  <button type="button" className="tile" onClick={() => send(t.q)}>
-                    <span className="well"><Icon name={t.icon} /></span>
-                    <strong>{t.verb}</strong>
-                    <small>{t.q}</small>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </section>
+          <ul className="tiles">
+            {QUICK.map((t) => (
+              <li key={t.q}>
+                <button type="button" className="tile" onClick={(e) => find(t.q, "page", originOf(e))}>
+                  <span className="well"><Icon name={t.icon} /></span>
+                  <strong>{t.verb}</strong>
+                </button>
+              </li>
+            ))}
+          </ul>
 
-          <section aria-labelledby="how-h">
+          <section className="how" aria-labelledby="how-h">
             <h2 id="how-h" className="section-h">How it works</h2>
             <ol className="steps">
-              {STEPS.map((s, i) => (
+              {HOW.map((s, i) => (
                 <li key={s.t}>
                   <span className="num" aria-hidden="true">{i + 1}</span>
                   <div>
@@ -237,8 +265,8 @@ export default function App() {
             </ol>
           </section>
 
-          <section className="browse" aria-labelledby="browse-h">
-            <h2 id="browse-h" className="section-h">Browse by topic</h2>
+          <details className="browse">
+            <summary>All topics</summary>
             {topicState}
             {groups.map(({ g, items }) => (
               <div key={g} className="bgroup">
@@ -246,7 +274,7 @@ export default function App() {
                 <ul>
                   {items.map((s) => (
                     <li key={s.id}>
-                      <button type="button" className="navitem" onClick={() => openTopic(s)}>
+                      <button type="button" className="navitem" onClick={(e) => setReader({ kind: "topic", seg: s, origin: originOf(e) })}>
                         <Icon name={s.icon} />
                         <span>{s.title}</span>
                       </button>
@@ -255,14 +283,29 @@ export default function App() {
                 </ul>
               </div>
             ))}
-          </section>
+          </details>
         </div>
       </main>
 
-      {!chatOpen && (
+      {!chatOpen && !reader && (
         <button type="button" className="launcher" onClick={() => setChatOpen(true)} aria-haspopup="dialog">
           <Icon name="chat" /> Ask the helper
         </button>
+      )}
+
+      {reader && (
+        <Reader
+          reader={reader}
+          email={email}
+          version={kb?.version}
+          onClose={() => setReader(null)}
+          onVerdict={verdict}
+          onRetry={() => find(reader.question)}
+          onHelper={() => {
+            setReader(null);
+            setChatOpen(true);
+          }}
+        />
       )}
 
       {chatOpen && (
@@ -273,12 +316,11 @@ export default function App() {
           busy={busy}
           text={text}
           setText={setText}
-          send={send}
+          send={(q) => find(q, "chat")}
           maxChars={maxChars}
           email={email}
           version={kb?.version}
           endRef={endRef}
-          onVerdict={verdict}
           onPrivacy={() => setPrivacy(true)}
         />
       )}
@@ -338,7 +380,85 @@ function useDialog(ref, onClose, focusRef) {
   }, [ref, focusRef]);
 }
 
-function ChatModal({ onClose, messages, clear, busy, text, setText, send, maxChars, email, version, endRef, onVerdict, onPrivacy }) {
+function Reader({ reader, email, version, onClose, onVerdict, onRetry, onHelper }) {
+  const box = useRef(null);
+  const first = useRef(null);
+  useDialog(box, onClose, first);
+  const doc = reader.kind === "doc" ? reader.doc : null;
+  const seg = reader.kind === "topic" ? reader.seg : null;
+  const title = doc ? doc.title : seg ? seg.title : "Looking for a written answer";
+  const steps = doc ? doc.steps : seg ? seg.steps : [];
+  return (
+    <div className="scrim chat-scrim" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
+      <section
+        ref={box}
+        className="chat-modal reader"
+        style={reader.origin ? { transformOrigin: reader.origin } : undefined}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="reader-title"
+      >
+        <header className="chat-head">
+          <div>
+            <h2 id="reader-title">{title}</h2>
+            {(doc || seg) && <small>{doc ? `Read this · ${doc.source}` : "Topic"}</small>}
+          </div>
+          <button type="button" ref={first} className="btn ghost close" onClick={onClose} aria-label="Close">
+            <Icon name="close" />
+          </button>
+        </header>
+
+        <div className="doc-body">
+          {reader.kind === "loading" && <StateBox kind="loading" title="Looking for a written answer…" />}
+          {reader.kind === "error" && (
+            <StateBox kind="error" title="That didn't work" action={{ label: "Try again", run: onRetry }}>
+              {reader.text}
+            </StateBox>
+          )}
+          {(doc || seg) && (
+            <>
+              <p>{doc ? doc.body : seg.blurb}</p>
+              {steps.length > 0 && (
+                <>
+                  <h3>Steps</h3>
+                  <ol>{steps.map((st, i) => <li key={i}>{st}</li>)}</ol>
+                </>
+              )}
+              {doc && <p className="hint">{doc.confirm}</p>}
+              <Flag href={flagLink(email, doc ? doc.segment.title : seg.title, version)} />
+            </>
+          )}
+        </div>
+
+        {doc && (
+          <footer className="doc-foot">
+            {reader.verdict === null ? (
+              <div className="verdict" role="group" aria-label="Was this helpful?">
+                <strong>Was this helpful?</strong>
+                <button type="button" className="btn" onClick={() => onVerdict(true)}>Yes</button>
+                <button type="button" className="btn" onClick={() => onVerdict(false)}>No, ask the helper</button>
+              </div>
+            ) : (
+              <div className="verdict">
+                <p className="thanks" role="status">Glad that helped.</p>
+                <button type="button" className="btn primary" onClick={onClose}>Done</button>
+              </div>
+            )}
+          </footer>
+        )}
+        {seg && (
+          <footer className="doc-foot">
+            <div className="verdict">
+              <button type="button" className="btn" onClick={onHelper}><Icon name="chat" /> Still need help? Ask the helper</button>
+            </div>
+          </footer>
+        )}
+      </section>
+    </div>
+  );
+}
+
+function ChatModal({ onClose, messages, clear, busy, text, setText, send, maxChars, email, version, endRef, onPrivacy }) {
   const box = useRef(null);
   const input = useRef(null);
   useDialog(box, onClose, input);
@@ -349,7 +469,7 @@ function ChatModal({ onClose, messages, clear, busy, text, setText, send, maxCha
           <span className="mark" aria-hidden="true">S</span>
           <div>
             <h2 id="chat-title">Ask the helper</h2>
-            <small>Written answers first. Short steps, plain words.</small>
+            <small>Short steps, plain words.</small>
           </div>
           <button type="button" className="btn ghost close" onClick={onClose} aria-label="Close the helper">
             <Icon name="close" />
@@ -360,7 +480,6 @@ function ChatModal({ onClose, messages, clear, busy, text, setText, send, maxCha
           {messages.length === 0 && (
             <section className="hello">
               <h3>Ask me about SIWES</h3>
-              <p>Letters, your logbook, your supervisor, or the defence.</p>
               <ul className="chips">
                 {QUICK.map((t) => (
                   <li key={t.q}>
@@ -374,7 +493,7 @@ function ChatModal({ onClose, messages, clear, busy, text, setText, send, maxCha
           )}
 
           {messages.map((m) => (
-            <Message key={m.id} m={m} email={email} version={version} onVerdict={onVerdict} onRetry={send} onPrivacy={onPrivacy} />
+            <Message key={m.id} m={m} email={email} version={version} onRetry={send} onPrivacy={onPrivacy} />
           ))}
 
           {busy && <StateBox kind="loading" title={busy} />}
@@ -442,7 +561,7 @@ function flagLink(email, topic, version) {
   return `mailto:${email}?subject=${subject}&body=${body}`;
 }
 
-function Message({ m, email, version, onVerdict, onRetry, onPrivacy }) {
+function Message({ m, email, version, onRetry, onPrivacy }) {
   if (m.role === "user") {
     return <div className="msg user"><p>{m.text}</p></div>;
   }
@@ -458,50 +577,6 @@ function Message({ m, email, version, onVerdict, onRetry, onPrivacy }) {
       <StateBox kind="notice" title="One thing first" action={m.action === "privacy" ? { label: "Open Privacy", run: onPrivacy } : null}>
         {m.text}
       </StateBox>
-    );
-  }
-  if (m.role === "topic") {
-    const s = m.seg;
-    return (
-      <article className="msg card">
-        <Label tone="doc">Topic · {s.title}</Label>
-        <p>{s.blurb}</p>
-        {s.steps.length > 0 && (
-          <>
-            <h3>Steps</h3>
-            <ol>{s.steps.map((st, i) => <li key={i}>{st}</li>)}</ol>
-          </>
-        )}
-        <p className="hint">Type your question below if you need more.</p>
-        <Flag href={flagLink(email, s.title, version)} />
-      </article>
-    );
-  }
-  if (m.role === "doc") {
-    const d = m.doc;
-    return (
-      <article className="msg card doc">
-        <Label tone="doc">Read this · {d.source}</Label>
-        <h3>{d.title}</h3>
-        <p>{d.body}</p>
-        {d.steps.length > 0 && (
-          <details>
-            <summary>Steps for {d.segment.title}</summary>
-            <ol>{d.steps.map((st, i) => <li key={i}>{st}</li>)}</ol>
-          </details>
-        )}
-        <p className="hint">{d.confirm}</p>
-        {m.verdict === null ? (
-          <div className="verdict" role="group" aria-label="Was this helpful?">
-            <strong>Was this helpful?</strong>
-            <button type="button" className="btn" onClick={() => onVerdict(m, true)}>Yes</button>
-            <button type="button" className="btn" onClick={() => onVerdict(m, false)}>No, ask the helper</button>
-          </div>
-        ) : (
-          <p className="thanks" role="status">{m.verdict === "yes" ? "Glad that helped." : "Okay, asking the helper."}</p>
-        )}
-        <Flag href={flagLink(email, d.segment.title, version)} />
-      </article>
     );
   }
   // bot
@@ -546,7 +621,7 @@ function PrivacyDialog({ consent, choose, email, hasCheck, onClose }) {
           <li>Please don't type your matric number, phone number or address. We try to remove obvious ones, but can't catch everything.</li>
           <li>Written answers come from our own notes. Only when you ask the helper is your question (after removing obvious personal details) sent to an AI service to write the answer.</li>
           <li>To keep bots out, the helper uses a Google security check, which receives signals such as your IP address under Google's terms. It loads only when you ask the helper, and only if you allow it.</li>
-          <li>Your theme and this choice are saved in your own browser.</li>
+          <li>This choice is saved in your own browser.</li>
           <li>Questions or requests about your data: {email}.</li>
         </ul>
         <p className="hint">Draft notice. The school will confirm the full details before launch.</p>

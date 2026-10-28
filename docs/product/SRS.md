@@ -13,7 +13,7 @@ Read this before adding or dropping a feature.
 - **F6** "Flag a correction" on each answer, opening a mailto to the coordinator with the topic prefilled and no chat text unless the student adds it.
 - **F7** When the KB has no answer, say so and give the coordinator email.
 - **F8** Works without an API key (offline answers).
-- **F9** Light and dark themes, remembered locally.
+- **F9** One white, brand-coloured look (no dark mode). A collapsible topics sidebar remembers its state locally. A selected written answer opens in its own reader, never inside the chat.
 - **F10** Consent banner (equal accept/decline) and a privacy notice dialog.
 - **F11** Clear conversation button.
 
