@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { captchaToken, chat, getKb, lookup } from "./api.js";
+import { captchaToken, chat, getKb, getStats, lookup, sendEvent } from "./api.js";
 import { Prose } from "./markdown.jsx";
 import { Icon } from "./Icon.jsx";
 
@@ -39,6 +39,12 @@ const store = {
   },
 };
 
+const fmtDate = (iso) =>
+  new Date(`${iso}T00:00:00`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+
+// A topic can be opened from a link like /#topic=logbook.
+const hashTopic = () => new URLSearchParams(location.hash.slice(1)).get("topic");
+
 // The school's logo lives at web/public/miva-logo.png. Until that file exists the "S" mark shows instead.
 function Logo() {
   const [ok, setOk] = useState(true);
@@ -63,6 +69,8 @@ export default function App() {
   const [rail, setRail] = useState(() => store.get("siwes.rail") === "1");
   const [privacy, setPrivacy] = useState(false);
   const [consent, setConsent] = useState(() => store.get("siwes.consent"));
+  const [search, setSearch] = useState("");
+  const [stats, setStats] = useState(() => location.hash === "#stats");
   const endRef = useRef(null);
 
   const loadKb = useCallback(() => {
@@ -70,6 +78,30 @@ export default function App() {
     getKb().then(setKb).catch(() => setKbError(true));
   }, []);
   useEffect(loadKb, [loadKb]);
+
+  const openSeg = useCallback((seg, origin) => {
+    sendEvent("open", seg.id);
+    window.history.replaceState(null, "", `#topic=${seg.id}`);
+    setReader({ kind: "topic", seg, origin });
+  }, []);
+
+  // Open a shared link once the topics are in.
+  useEffect(() => {
+    const t = kb && hashTopic();
+    const seg = t && kb.segments.find((s) => s.id === t);
+    if (seg) openSeg(seg);
+  }, [kb, openSeg]);
+
+  useEffect(() => {
+    const onHash = () => setStats(location.hash === "#stats");
+    addEventListener("hashchange", onHash);
+    return () => removeEventListener("hashchange", onHash);
+  }, []);
+
+  const closeReader = useCallback(() => {
+    setReader(null);
+    if (hashTopic()) window.history.replaceState(null, "", location.pathname + location.search);
+  }, []);
 
   useEffect(() => {
     if (!messages.length) return;
@@ -144,6 +176,7 @@ export default function App() {
     setBusy(null);
     if (doc) {
       setChatOpen(false);
+      sendEvent("open", doc.segment.id);
       setReader({ kind: "doc", doc, question: q, verdict: null, origin });
     } else {
       setReader(null);
@@ -152,11 +185,12 @@ export default function App() {
   }
 
   function verdict(helpful) {
+    sendEvent(helpful ? "yes" : "no", reader.doc.segment.id);
     if (helpful) {
       setReader((r) => ({ ...r, verdict: "yes" }));
     } else {
       const q = reader.question;
-      setReader(null);
+      closeReader();
       ask(q);
     }
   }
@@ -168,6 +202,16 @@ export default function App() {
 
   const groups = useMemo(() => (kb ? kb.groups.map((g) => ({ g, items: kb.segments.filter((s) => s.group === g) })) : []), [kb]);
 
+  const matches = useMemo(() => {
+    const words = search.toLowerCase().split(/\s+/).filter((w) => w.length > 1);
+    if (!kb || !words.length) return [];
+    return kb.segments
+      .filter((s) => words.every((w) => `${s.title} ${s.blurb}`.toLowerCase().includes(w)))
+      .slice(0, 4);
+  }, [kb, search]);
+
+  const popular = (kb?.popular || []).map((pid) => kb.segments.find((s) => s.id === pid)).filter(Boolean);
+
   const topicState = (
     <>
       {kbError && (
@@ -178,6 +222,8 @@ export default function App() {
       {!kb && !kbError && <StateBox kind="loading" title="Loading topics…" />}
     </>
   );
+
+  if (stats) return <Stats />;
 
   return (
     <div className={`shell${rail ? " rail" : ""}`}>
@@ -217,7 +263,7 @@ export default function App() {
                     <button
                       type="button"
                       className="navitem"
-                      onClick={(e) => setReader({ kind: "topic", seg: s, origin: originOf(e) })}
+                      onClick={(e) => openSeg(s, originOf(e))}
                       title={s.title}
                       aria-label={s.title}
                     >
@@ -234,10 +280,57 @@ export default function App() {
 
       <main className="page" id="main">
         <div className="page-inner">
+          {kb?.deadlines?.length > 0 && (
+            <ul className="deadlines" aria-label="Upcoming dates">
+              {kb.deadlines.map((d) => (
+                <li key={d.label + d.date}>
+                  <Icon name="calendar" />
+                  <span><strong>{d.label}</strong> · {fmtDate(d.date)}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+
           <div className="page-head">
             <h1>What do you need help with?</h1>
-            <p>Pick a question, or choose a topic.</p>
+            <p>Type a question, pick one below, or choose a topic.</p>
           </div>
+
+          <form
+            className="search"
+            role="search"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const q = search;
+              setSearch("");
+              find(q, "page", originOf({ currentTarget: e.currentTarget.querySelector("button") }));
+            }}
+          >
+            <label htmlFor="q" className="sr">Search the guide</label>
+            <Icon name="search" />
+            <input
+              id="q"
+              type="search"
+              value={search}
+              maxLength={maxChars}
+              placeholder="Example: Where do I submit my acceptance letter?"
+              onChange={(e) => setSearch(e.target.value)}
+              autoComplete="off"
+            />
+            <button type="submit" className="btn primary" disabled={!search.trim() || !!busy}>Find</button>
+          </form>
+          {matches.length > 0 && (
+            <ul className="matches" aria-label="Matching topics">
+              {matches.map((s) => (
+                <li key={s.id}>
+                  <button type="button" className="navitem" onClick={(e) => openSeg(s, originOf(e))}>
+                    <Icon name={s.icon} />
+                    <span>{s.title}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
 
           <ul className="tiles">
             {QUICK.map((t) => (
@@ -249,6 +342,21 @@ export default function App() {
               </li>
             ))}
           </ul>
+
+          {popular.length > 0 && (
+            <section aria-labelledby="pop-h">
+              <h2 id="pop-h" className="section-h">Most asked</h2>
+              <ul className="chips">
+                {popular.map((s) => (
+                  <li key={s.id}>
+                    <button type="button" className="chip" onClick={(e) => openSeg(s, originOf(e))}>
+                      <Icon name={s.icon} /> {s.title}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <section className="how" aria-labelledby="how-h">
             <h2 id="how-h" className="section-h">How it works</h2>
@@ -274,7 +382,7 @@ export default function App() {
                 <ul>
                   {items.map((s) => (
                     <li key={s.id}>
-                      <button type="button" className="navitem" onClick={(e) => setReader({ kind: "topic", seg: s, origin: originOf(e) })}>
+                      <button type="button" className="navitem" onClick={(e) => openSeg(s, originOf(e))}>
                         <Icon name={s.icon} />
                         <span>{s.title}</span>
                       </button>
@@ -298,12 +406,17 @@ export default function App() {
           reader={reader}
           email={email}
           version={kb?.version}
-          onClose={() => setReader(null)}
+          onClose={closeReader}
           onVerdict={verdict}
           onRetry={() => find(reader.question)}
           onHelper={() => {
-            setReader(null);
+            closeReader();
             setChatOpen(true);
+          }}
+          onSimple={(how) => {
+            const topic = reader.kind === "doc" ? reader.doc.title : reader.seg.title;
+            closeReader();
+            ask(`Explain "${topic}" in ${how}. Keep it short.`);
           }}
         />
       )}
@@ -380,7 +493,7 @@ function useDialog(ref, onClose, focusRef) {
   }, [ref, focusRef]);
 }
 
-function Reader({ reader, email, version, onClose, onVerdict, onRetry, onHelper }) {
+function Reader({ reader, email, version, onClose, onVerdict, onRetry, onHelper, onSimple }) {
   const box = useRef(null);
   const first = useRef(null);
   useDialog(box, onClose, first);
@@ -425,7 +538,19 @@ function Reader({ reader, email, version, onClose, onVerdict, onRetry, onHelper 
                 </>
               )}
               {doc && <p className="hint">{doc.confirm}</p>}
-              <Flag href={flagLink(email, doc ? doc.segment.title : seg.title, version)} />
+              <p className="hint">Last confirmed {doc?.confirmed ?? confirmedOn(version)}.</p>
+              <div className="reader-tools">
+                <button type="button" className="link" onClick={() => window.print()}><Icon name="file" /> Print or save as PDF</button>
+                <CopyLink id={doc ? doc.segment.id : seg.id} />
+                <a className="flag" href={contactLink(email, reader.question ?? title, version)}><Icon name="mail" /> Contact the coordinator</a>
+                <Flag href={flagLink(email, doc ? doc.segment.title : seg.title, version)} />
+              </div>
+              <div className="simple">
+                <span>Read it differently:</span>
+                <button type="button" className="chip" onClick={() => onSimple("simpler words")}>Simpler words</button>
+                <button type="button" className="chip" onClick={() => onSimple("Nigerian Pidgin")}>Pidgin</button>
+                <small>Written by the helper, not checked by the coordinator.</small>
+              </div>
             </>
           )}
         </div>
@@ -555,6 +680,83 @@ function StateBox({ kind, title, children, action }) {
   );
 }
 
+function confirmedOn(version = "") {
+  const [y, m] = version.split(".");
+  return y && m ? new Date(Number(y), Number(m) - 1).toLocaleString("en-GB", { month: "long", year: "numeric" }) : "recently";
+}
+
+function contactLink(email, question, version) {
+  const subject = encodeURIComponent("SIWES question");
+  const body = encodeURIComponent(`Hello,\n\nI read the guide but I still need help with:\n${question}\n\nGuide version: ${version ?? ""}\n\n(Please do not add your matric number or phone number here unless the coordinator asks.)`);
+  return `mailto:${email}?subject=${subject}&body=${body}`;
+}
+
+function CopyLink({ id }) {
+  const [done, setDone] = useState(false);
+  async function copy() {
+    const url = `${location.origin}${location.pathname}#topic=${id}`;
+    try {
+      await navigator.clipboard.writeText(url);
+      setDone(true);
+      setTimeout(() => setDone(false), 2000);
+    } catch {
+      window.prompt("Copy this link", url);
+    }
+  }
+  return (
+    <button type="button" className="link" onClick={copy} aria-live="polite">
+      <Icon name="route" /> {done ? "Link copied" : "Copy link"}
+    </button>
+  );
+}
+
+// Coordinator page at /#stats. Counts only; the key is kept in memory for this visit.
+function Stats() {
+  const [key, setKey] = useState("");
+  const [data, setData] = useState(null);
+  const [err, setErr] = useState("");
+  async function load(e) {
+    e.preventDefault();
+    setErr("");
+    try {
+      setData(await getStats(key));
+    } catch (x) {
+      setErr(x.message);
+    }
+  }
+  return (
+    <main className="page stats" id="main">
+      <div className="page-inner">
+        <div className="page-head">
+          <h1>Coordinator view</h1>
+          <p>Counts only. No questions, no names, no devices.</p>
+        </div>
+        {!data ? (
+          <form className="search" onSubmit={load}>
+            <label htmlFor="k" className="sr">Coordinator key</label>
+            <input id="k" type="password" value={key} onChange={(e) => setKey(e.target.value)} placeholder="Coordinator key" autoComplete="off" />
+            <button type="submit" className="btn primary" disabled={!key}>Show counts</button>
+          </form>
+        ) : (
+          <div className="table-wrap">
+            <table>
+              <caption>Since {new Date(data.since).toLocaleString("en-GB")} (resets when the server restarts)</caption>
+              <thead><tr><th>Topic</th><th>Opened</th><th>Helpful</th><th>Not helpful</th><th>"No" rate</th></tr></thead>
+              <tbody>
+                {[...data.topics].sort((a, b) => b.open - a.open).map((t) => (
+                  <tr key={t.id}><td>{t.id}</td><td>{t.open}</td><td>{t.yes}</td><td>{t.no}</td><td>{t.yes + t.no ? `${t.noRate}%` : "-"}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+        {err && <StateBox kind="error" title="Could not show counts">{err}</StateBox>}
+        <p><a href="#main" onClick={() => { location.hash = ""; }}>Back to the guide</a></p>
+      </div>
+    </main>
+  );
+}
+
 function flagLink(email, topic, version) {
   const subject = encodeURIComponent(`SIWES Guide correction: ${topic}`);
   const body = encodeURIComponent(`Topic: ${topic}\nGuide version: ${version ?? ""}\n\nWhat looks wrong or out of date:\n`);
@@ -621,6 +823,8 @@ function PrivacyDialog({ consent, choose, email, hasCheck, onClose }) {
           <li>Please don't type your matric number, phone number or address. We try to remove obvious ones, but can't catch everything.</li>
           <li>Written answers come from our own notes. Only when you ask the helper is your question (after removing obvious personal details) sent to an AI service to write the answer.</li>
           <li>To keep bots out, the helper uses a Google security check, which receives signals such as your IP address under Google's terms. It loads only when you ask the helper, and only if you allow it.</li>
+          <li>We count which topics are opened and whether they helped, with no link to you, so the coordinator can fix weak answers.</li>
+          <li>Your browser may keep a copy of the topics so they open without a connection.</li>
           <li>This choice is saved in your own browser.</li>
           <li>Questions or requests about your data: {email}.</li>
         </ul>

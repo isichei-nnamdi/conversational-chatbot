@@ -1,0 +1,13 @@
+{
+  "name": "SIWES Guide",
+  "short_name": "SIWES Guide",
+  "description": "SIWES answers for Miva Open University students.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b1f4d",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-270.png", "sizes": "270x270", "type": "image/png" }
+  ]
+}

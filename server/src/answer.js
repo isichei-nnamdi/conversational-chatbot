@@ -56,6 +56,7 @@ async function callModel(system, messages, apiKey) {
       model: MODEL_ID,
       max_tokens: MAX_OUTPUT_TOKENS,
       temperature: 0.3,
+      reasoning_effort: "low",
       messages: [{ role: "system", content: system }, ...messages],
     }),
     signal: AbortSignal.timeout(20_000),

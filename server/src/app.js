@@ -1,9 +1,11 @@
 import express from "express";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
+import { timingSafeEqual } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { answer } from "./answer.js";
 import { COORDINATOR_EMAIL, KB_VERSION, LOOKUP_RATE_LIMIT, MAX_MESSAGE_CHARS, RATE_LIMIT } from "./constants.js";
+import { createInsights } from "./insights.js";
 import { gatesRequested, skipGates } from "./localtest.js";
 import { lookup } from "./lookup.js";
 import { verifyRecaptcha } from "./recaptcha.js";
@@ -11,8 +13,25 @@ import { buildIndex } from "./retrieve.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 
+// The coordinator lists dates in server/data/deadlines.json: [{ "label": "...", "date": "YYYY-MM-DD" }].
+// Only dates that have not passed are shown. An empty file shows nothing.
+function upcomingDeadlines(file = path.resolve(here, "../data/deadlines.json")) {
+  try {
+    const today = new Date().toISOString().slice(0, 10);
+    return JSON.parse(readFileSync(file, "utf8"))
+      .filter((d) => typeof d.label === "string" && /^\d{4}-\d{2}-\d{2}$/.test(d.date) && d.date >= today)
+      .sort((a, b) => a.date.localeCompare(b.date))
+      .slice(0, 3);
+  } catch {
+    return [];
+  }
+}
+
+const sameKey = (a, b) => a.length === b.length && timingSafeEqual(Buffer.from(a), Buffer.from(b));
+
 export function createApp({ kb, llm, apiKey, verify = verifyRecaptcha, log = console.log, allowedOrigin = process.env.ALLOWED_ORIGIN, env = process.env } = {}) {
   const index = buildIndex(kb);
+  const insights = createInsights(kb.segments.map((s) => s.id));
   const allowed = String(allowedOrigin || "").split(",").map((o) => o.trim()).filter(Boolean);
   const app = express();
   app.disable("x-powered-by");
@@ -31,7 +50,7 @@ export function createApp({ kb, llm, apiKey, verify = verifyRecaptcha, log = con
     if (allowedOrigin && origin && allowed.includes(origin)) {
       res.setHeader("Access-Control-Allow-Origin", origin);
       res.setHeader("Vary", "Origin");
-      res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+      res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
       res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
     }
     res.setHeader("X-Content-Type-Options", "nosniff");
@@ -75,6 +94,8 @@ export function createApp({ kb, llm, apiKey, verify = verifyRecaptcha, log = con
       groups,
       coordinatorEmail: COORDINATOR_EMAIL,
       maxChars: MAX_MESSAGE_CHARS,
+      popular: insights.popular(),
+      deadlines: upcomingDeadlines(),
       recaptchaSiteKey: gatesRequested(env) ? null : env.RECAPTCHA_SITE_KEY || null,
       segments: segments.map(({ id, group, title, icon, blurb, steps }) => ({ id, group, title, icon, blurb, steps })),
     });
@@ -94,6 +115,20 @@ export function createApp({ kb, llm, apiKey, verify = verifyRecaptcha, log = con
     const { message, history } = req.body;
     const out = await answer({ index, message: message.trim(), history, llm, ...(apiKey !== undefined && { apiKey }) });
     res.json(out);
+  });
+
+  // Anonymous counts so the coordinator can see which answers get read and which fail.
+  app.post("/api/event", lookupLimiter, (req, res) => {
+    insights.record(req.body?.type, req.body?.id);
+    res.sendStatus(204);
+  });
+
+  app.get("/api/stats", (req, res) => {
+    const key = env.STATS_KEY;
+    const given = String(req.headers.authorization || "").replace(/^Bearer /, "");
+    if (!key) return res.sendStatus(404);
+    if (!given || !sameKey(given, key)) return res.status(401).json({ error: "Wrong key." });
+    res.json(insights.snapshot());
   });
 
   app.get("/api/health", (_req, res) => res.json({ ok: true, kbVersion: KB_VERSION }));

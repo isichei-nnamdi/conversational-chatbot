@@ -305,3 +305,29 @@ textarea::placeholder { color: var(--quiet); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Search, most asked, dates, reader tools, coordinator counts */
+.search { display: flex; align-items: center; gap: 10px; margin: 16px 0 8px; padding: 6px 6px 6px 14px; background: var(--surface); border: 1px solid var(--edge); border-radius: 999px; }
+.search:focus-within { outline: 2px solid var(--ring); outline-offset: 2px; }
+.search input { flex: 1; min-width: 0; min-height: 40px; border: 0; background: none; color: var(--ink); font: inherit; outline: none; }
+.matches { display: grid; gap: 4px; margin: 0 0 16px; padding: 0; list-style: none; }
+.deadlines { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; padding: 0; list-style: none; }
+.deadlines li { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; background: var(--accent-tint); border-radius: var(--r-sm); }
+.reader-tools { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; margin-top: 12px; }
+.reader-tools .link, .reader-tools .flag { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; }
+.reader-tools .flag { color: var(--ink); text-decoration: underline; }
+.simple { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
+.simple small { flex-basis: 100%; color: var(--quiet); }
+.table-wrap { overflow-x: auto; }
+.stats table { width: 100%; border-collapse: collapse; }
+.stats caption { text-align: left; color: var(--quiet); padding-bottom: 8px; }
+.stats th, .stats td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+.stats th { background: var(--sunk); }
+
+@media print {
+  body { overflow: visible !important; }
+  .shell > :not(.chat-scrim), .chat-head .close, .doc-foot, .reader-tools, .simple, .consent { display: none !important; }
+  .scrim { position: static !important; background: none !important; display: block !important; }
+  .chat-modal { position: static !important; box-shadow: none !important; max-height: none !important; width: auto !important; animation: none !important; transform: none !important; }
+  .doc-body { overflow: visible !important; max-height: none !important; }
+}

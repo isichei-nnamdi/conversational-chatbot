@@ -9,7 +9,7 @@
     "build": "npm run build -w web",
     "start": "npm start -w server",
     "kb": "echo Run: python scripts/build_kb.py <qa_flat.json>",
-    "test": "npm test -w server && npm run build -w web"
+    "test": "npm test -w server && npm run build -w web && node scripts/check-prod-target.mjs"
   },
   "devDependencies": {
     "concurrently": "^9.0.0"

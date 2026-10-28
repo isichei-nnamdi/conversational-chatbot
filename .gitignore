@@ -6,3 +6,5 @@ __pycache__/
 # raw sources hold student questions: never commit
 private/
 *.xlsx
+.env.production.local
+.env.prod

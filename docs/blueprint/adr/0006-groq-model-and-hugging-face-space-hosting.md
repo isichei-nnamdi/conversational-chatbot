@@ -5,7 +5,7 @@ Status: accepted. Supersedes the provider and hosting parts of 0002.
 **Context.** The owner chose Groq for the model and a Hugging Face Docker Space for the backend. A GitHub Action pushes only the `server/` folder to the Space.
 
 **Decision.**
-- The server calls Groq's OpenAI-compatible chat completions endpoint with plain `fetch` (model `llama-3.3-70b-versatile`, key `GROQ_API_KEY`). No vendor SDK. Response mode label is `"ai"`.
+- The server calls Groq's OpenAI-compatible chat completions endpoint with plain `fetch` (model `openai/gpt-oss-120b` (llama-3.3-70b-versatile was retired by Groq; changed 2026-10-28), key `GROQ_API_KEY`). No vendor SDK. Response mode label is `"ai"`.
 - The API runs in a Docker Space on port 7860 (`server/Dockerfile`; `server/README.md` carries the Space front matter).
 - Because only `server/` is deployed, the built knowledge base lives at `server/data/kb.json`.
 - The front end is built separately and calls the Space through `VITE_API_BASE`. `ALLOWED_ORIGIN` is a comma-separated allowlist.

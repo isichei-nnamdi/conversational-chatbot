@@ -20,6 +20,19 @@ export const getKb = () => call("/api/kb");
 export const lookup = (message) => post("/api/lookup", { message });
 export const chat = (message, history, captchaToken) => post("/api/chat", { message, history, captchaToken });
 
+// Anonymous counts: a kind and a topic id, nothing else. Never blocks the page and never shows an error.
+export const sendEvent = (type, id) => {
+  if (!id) return;
+  fetch(BASE + "/api/event", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ type, id }),
+    keepalive: true,
+  }).catch(() => {});
+};
+
+export const getStats = (key) => call("/api/stats", { headers: { Authorization: `Bearer ${key}` } });
+
 // reCAPTCHA v3 loads only when the student asks the bot, and only after they allow it.
 let loading;
 function loadRecaptcha(siteKey) {

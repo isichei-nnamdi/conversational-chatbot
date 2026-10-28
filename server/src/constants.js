@@ -2,7 +2,7 @@
 // The pre-commit hook flags changes to the lines marked WATCHED.
 
 export const KB_VERSION = "2026.10.1"; // WATCHED: must equal server/data/kb.json version
-export const MODEL_ID = "llama-3.3-70b-versatile"; // WATCHED
+export const MODEL_ID = "openai/gpt-oss-120b"; // WATCHED
 export const LLM_URL = "https://api.groq.com/openai/v1/chat/completions";
 export const COORDINATOR_EMAIL = "augustus@miva.university"; // WATCHED
 export const MAX_MESSAGE_CHARS = 500; // WATCHED

@@ -32,6 +32,14 @@ With no `GROQ_API_KEY` the server still works: it answers straight from the know
 
 To preview the production build against the local server, build with an empty API base: `VITE_API_BASE= npm run build -w web`, then `npm start -w server` (it serves `web/dist` when present).
 
+## Coordinator features
+
+- **Dates strip:** list dates in `server/data/deadlines.json` as `[{"label": "...", "date": "YYYY-MM-DD"}]`. Past dates drop off; an empty file shows nothing.
+- **Counts:** set `STATS_KEY` (any long random string) and open `/#stats`. Counts are anonymous and reset when the server restarts.
+- **Last confirmed:** shown from `KB_VERSION`. Bump it when the notes are re-checked.
+- **Share a topic:** links look like `/#topic=logbook`.
+- **Offline:** production builds register `web/public/sw.js`, which keeps the page and the topics for offline reading.
+
 ## Deploy
 
 - **API:** a push to `main` that touches `server/**` runs the deploy workflow, which copies `server/` into the Space `AustinWealth/cc-space`. Needs the `HF_TOKEN` GitHub repository secret. Set `GROQ_API_KEY`, `ALLOWED_ORIGIN`, `RECAPTCHA_SITE_KEY`, `RECAPTCHA_SECRET` as Space secrets.
