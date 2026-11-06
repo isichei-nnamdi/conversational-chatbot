@@ -43,7 +43,7 @@ To preview the production build against the local server, build with an empty AP
 ## Deploy
 
 - **API:** a push to `main` that touches `server/**` runs the deploy workflow, which copies `server/` into the Space `AustinWealth/cc-space`. Needs the `HF_TOKEN` GitHub repository secret. Set `GROQ_API_KEY`, `ALLOWED_ORIGIN`, `RECAPTCHA_SITE_KEY`, `RECAPTCHA_SECRET` as Space secrets.
-- **Web:** `npm run build -w web` and host `web/dist` anywhere static. `web/.env.production` sets `VITE_API_BASE` to the Space. Add the site's URL to `ALLOWED_ORIGIN`.
+- **Web (Vercel):** in the project settings set **Root Directory** to `web`. `web/vercel.json` does the rest (installs only the web workspace from the repo lockfile, builds with Vite, serves `dist`). Vercel never builds or runs `server/`. Elsewhere: `npm run build -w web` and host `web/dist` anywhere static. `web/.env.production` sets `VITE_API_BASE` to the Space. Add the site's URL to `ALLOWED_ORIGIN`.
 
 See [ADR 0006](../blueprint/adr/0006-groq-model-and-hugging-face-space-hosting.md).
 
