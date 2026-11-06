@@ -10,12 +10,6 @@ const QUICK = [
   { icon: "calendar", verb: "How long is SIWES?", q: "How long is SIWES?" },
 ];
 
-const HOW = [
-  { icon: "search", t: "Pick a question", d: "Or choose a topic." },
-  { icon: "file", t: "Read the answer", d: "Short steps, in plain words." },
-  { icon: "chat", t: "Still stuck? Ask the helper", d: "It only opens if the answer didn't help." },
-];
-
 // Where the click happened, so the reader can unfurl out of it.
 const originOf = (e) => {
   const r = e.currentTarget.getBoundingClientRect();
@@ -357,21 +351,6 @@ export default function App() {
               </ul>
             </section>
           )}
-
-          <section className="how" aria-labelledby="how-h">
-            <h2 id="how-h" className="section-h">How it works</h2>
-            <ol className="steps">
-              {HOW.map((s, i) => (
-                <li key={s.t}>
-                  <span className="num" aria-hidden="true">{i + 1}</span>
-                  <div>
-                    <strong>{s.t}</strong>
-                    <small>{s.d}</small>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </section>
 
           <details className="browse">
             <summary>All topics</summary>
